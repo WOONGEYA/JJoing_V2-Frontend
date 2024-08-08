@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "defaultBase": "main",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/plugins/task-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint"]
+      }
+    }
+  },
+  "nxCloudAccessToken": "ZDA1YmQzMTEtYWQ1MS00MjkzLWEzNjgtMzYzMTdlNTRjMTQyfHJlYWQtd3JpdGU="
+}
