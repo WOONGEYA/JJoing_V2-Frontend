@@ -1,0 +1,10 @@
+{
+  "extends": "@jjoing/typescript-config/react-library.json",
+    "compilerOptions": {
+    "outDir": "dist",
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext"
+  },
+  "include": [".", ".eslintrc.js"],
+  "exclude": ["dist", "build", "node_modules"]
+}
