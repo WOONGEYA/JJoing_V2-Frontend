@@ -1,0 +1,16 @@
+name: "🔥 Feature Request"
+description: "새로운 기능에 대한 이슈를 작성해주세요."
+labels: ["feature"]
+body:
+  - type: textarea
+    attributes:
+      label: "기능 설명"
+      description: "새로운 기능에 대한 설명을 작성해 주세요."
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: "해야 할 일"
+      description: "해야 할 일을 작성해 주세요."
+    validations:
+      required: true
