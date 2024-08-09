@@ -1,3 +1,4 @@
+import '@jjoing/ui/styles';
 import type { Preview } from '@storybook/react';
 
 const preview: Preview = {
