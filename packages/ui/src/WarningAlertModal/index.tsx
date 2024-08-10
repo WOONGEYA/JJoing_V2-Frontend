@@ -1,5 +1,4 @@
 import { ForwardedRef, forwardRef } from 'react';
-import '../styles.css';
 
 type WarningAlertModalProps = {
   title: string;
@@ -21,7 +20,7 @@ const WarningAlertModal = forwardRef(function WarningAlertModal(
   ref: ForwardedRef<HTMLDivElement>
 ) {
   return (
-    <div ref={ref} {...props} className="w-80 h-52 bg-white flex flex-col rounded-lg">
+    <div ref={ref} className="w-80 h-52 bg-white flex flex-col rounded-lg" {...props}>
       <div className="w-full h-[220px] flex flex-col items-center justify-center gap-4">
         <h2 className="text-black text-lg font-semibold">{title}</h2>
         <h4 className="text-black">{subTitle}</h4>
