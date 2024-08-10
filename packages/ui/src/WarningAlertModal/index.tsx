@@ -1,4 +1,5 @@
 import { ForwardedRef, forwardRef } from 'react';
+import '../styles.css';
 
 type WarningAlertModalProps = {
   title: string;
