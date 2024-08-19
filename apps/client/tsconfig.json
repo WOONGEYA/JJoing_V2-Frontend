@@ -1,11 +1,16 @@
 {
   "extends": "@jjoing/typescript-config/nextjs.json",
   "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"]
+    },
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "types": ["react", "react-dom"]
   },
   "include": [
     "next-env.d.ts",

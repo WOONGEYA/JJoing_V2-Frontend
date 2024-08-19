@@ -1,7 +1,6 @@
 {
   "extends": "@jjoing/typescript-config/react-library.json",
-    "compilerOptions": {
-    "outDir": "dist",
+  "compilerOptions": {
     "moduleResolution": "NodeNext",
     "module": "NodeNext"
   },
