@@ -13,8 +13,12 @@ type Story = StoryObj<typeof meta>;
 
 export const DefaultInput: Story = {
   args: {
-    title: '프로젝트를 삭제하실 건가요?',
-    subTitle: '한번 삭제한 프로젝트는 되돌릴 수 없어요.',
-    confirmTitle: '삭제',
+    actionType: 'DELETE_PROJECT',
+    onConfirm: () => {
+      alert('프로젝트가 삭제되었습니다.');
+    },
+    onCancel: () => {
+      console.log('프로젝트 삭제가 취소되었습니다.');
+    },
   },
 };
