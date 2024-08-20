@@ -1,0 +1,17 @@
+import { Spinner } from '@jjoing/ui';
+import { Meta, StoryObj } from '@storybook/react';
+
+const meta = {
+  title: 'Spinner',
+  component: Spinner,
+  tags: ['autodocs'],
+} satisfies Meta<typeof Spinner>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const DefaultInput: Story = {
+  args: {
+    size: 'lg',
+  },
+};
