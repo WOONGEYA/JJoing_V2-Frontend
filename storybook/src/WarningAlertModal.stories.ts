@@ -1,6 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react';
-
 import { WarningAlertModal } from '@jjoing/ui';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   title: 'WarningAlertModal',
