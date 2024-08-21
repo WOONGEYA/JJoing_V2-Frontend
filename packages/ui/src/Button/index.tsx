@@ -35,7 +35,6 @@ const ButtonVariants = cva('', {
     },
     disabled: {
       true: 'cursor-not-allowed opacity-50',
-      false: '',
     },
   },
   compoundVariants: [
