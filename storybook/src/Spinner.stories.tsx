@@ -1,5 +1,5 @@
 import { Spinner } from '@jjoing/ui';
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   title: 'Spinner',
