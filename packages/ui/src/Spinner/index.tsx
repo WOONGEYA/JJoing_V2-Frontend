@@ -7,13 +7,13 @@ type SpinnerProps = {
 };
 
 const SpinnerVariants = cva(
-  'animate-spin rounded-full border-solid border-gray-500 border-t-primary',
+  'animate-spin rounded-full border-solid border-gray-300 border-t-primary',
   {
     variants: {
       size: {
-        lg: 'size-16 border-8',
-        md: 'size-12 border-[6px]',
-        sm: 'size-8 border-4',
+        lg: 'size-12 border-2',
+        md: 'size-10 border-2',
+        sm: 'size-8 border-2',
       },
     },
     defaultVariants: {
