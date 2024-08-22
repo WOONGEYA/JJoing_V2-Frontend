@@ -12,6 +12,6 @@ type Story = StoryObj<typeof meta>;
 
 export const DefaultInput: Story = {
   args: {
-    size: 'lg',
+    size: 'md',
   },
 };
