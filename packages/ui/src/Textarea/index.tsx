@@ -29,10 +29,11 @@ const Textarea = forwardRef(function Textarea(
     color,
     height = 200,
     placeholder = '내용을 입력해주세요.',
+    onChange,
     className,
     ...props
   }: TextareaProps,
-  ref: ForwardedRef<HTMLDivElement>
+  ref: ForwardedRef<HTMLTextAreaElement>
 ) {
   return (
     <div
@@ -42,10 +43,11 @@ const Textarea = forwardRef(function Textarea(
         className
       )}
       style={{ height }}
-      ref={ref}
     >
       <textarea
+        ref={ref}
         placeholder={placeholder}
+        onChange={onChange}
         className="outline-0 placeholder:text-gray-300 text-sm resize-none size-full"
         {...props}
       />
