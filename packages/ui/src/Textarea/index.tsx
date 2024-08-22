@@ -1,13 +1,14 @@
 import { cn } from '@/utils';
 import { cva } from 'class-variance-authority';
-import { ForwardedRef, forwardRef, TextareaHTMLAttributes } from 'react';
+import type { HTMLAttributes } from 'react';
+import { ForwardedRef, forwardRef } from 'react';
 
 type TextareaProps = {
   color?: 'primary' | 'secondary' | 'black' | 'white' | 'gray';
   height?: number;
   placeholder?: string;
   className?: string;
-} & TextareaHTMLAttributes<HTMLTextAreaElement>;
+} & HTMLAttributes<HTMLTextAreaElement>;
 
 const TextareaVariants = cva('', {
   variants: {
