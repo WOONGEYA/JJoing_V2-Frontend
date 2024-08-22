@@ -1,6 +1,7 @@
 import { cn } from '@/utils';
 import { cva } from 'class-variance-authority';
-import { ForwardedRef, forwardRef, InputHTMLAttributes } from 'react';
+import type { InputHTMLAttributes } from 'react';
+import { ForwardedRef, forwardRef } from 'react';
 
 type InputProps = {
   width?: number;

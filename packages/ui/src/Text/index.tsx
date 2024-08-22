@@ -1,6 +1,7 @@
 import { cn } from '@/utils';
 import { cva } from 'class-variance-authority';
-import { forwardRef, HTMLAttributes } from 'react';
+import type { HTMLAttributes } from 'react';
+import { forwardRef } from 'react';
 
 type TextProps = {
   size?: 'xl' | 'x' | 'lg' | 'md' | 'sm' | 'xs';

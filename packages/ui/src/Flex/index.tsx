@@ -1,6 +1,7 @@
 import { cn } from '@/utils';
 import { cva } from 'class-variance-authority';
-import { CSSProperties, ForwardedRef, forwardRef, HTMLAttributes } from 'react';
+import type { HTMLAttributes } from 'react';
+import { CSSProperties, ForwardedRef, forwardRef } from 'react';
 
 type FlexProps = {
   items?: 'start' | 'center' | 'end';

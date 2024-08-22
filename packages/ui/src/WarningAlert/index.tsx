@@ -1,4 +1,5 @@
-import { ForwardedRef, forwardRef, HTMLAttributes } from 'react';
+import type { HTMLAttributes } from 'react';
+import { ForwardedRef, forwardRef } from 'react';
 
 type WarningAlertProps = {
   actionType: 'DELETE_PROJECT' | 'DELETE_ALARM';

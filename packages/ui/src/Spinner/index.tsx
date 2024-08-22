@@ -1,6 +1,6 @@
 import { cn } from '@/utils';
 import { cva } from 'class-variance-authority';
-import { HTMLAttributes } from 'react';
+import type { HTMLAttributes } from 'react';
 import { Flex } from '..';
 
 type SpinnerProps = {
