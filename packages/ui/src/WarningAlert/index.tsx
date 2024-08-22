@@ -1,10 +1,11 @@
+import type { HTMLAttributes } from 'react';
 import { ForwardedRef, forwardRef } from 'react';
 
 type WarningAlertProps = {
   actionType: 'DELETE_PROJECT' | 'DELETE_ALARM';
   onConfirm?: () => void;
   onCancel?: () => void;
-};
+} & HTMLAttributes<HTMLDivElement>;
 
 const WarningAlert = forwardRef(function WarningAlert(
   { actionType, onCancel, onConfirm, ...props }: WarningAlertProps,

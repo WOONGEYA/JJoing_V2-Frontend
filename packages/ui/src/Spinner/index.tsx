@@ -1,10 +1,11 @@
 import { cn } from '@/utils';
 import { cva } from 'class-variance-authority';
+import type { HTMLAttributes } from 'react';
 import { Flex } from '..';
 
 type SpinnerProps = {
   size?: 'lg' | 'md' | 'sm';
-};
+} & HTMLAttributes<HTMLDivElement>;
 
 const SpinnerVariants = cva(
   'animate-spin rounded-full border-solid border-gray-300 border-2 border-t-primary',

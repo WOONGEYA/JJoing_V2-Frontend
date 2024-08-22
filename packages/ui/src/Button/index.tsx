@@ -1,5 +1,6 @@
 import { cn } from '@/utils';
 import { cva } from 'class-variance-authority';
+import type { HTMLAttributes } from 'react';
 import { forwardRef } from 'react';
 
 type ButtonProps = {
@@ -10,9 +11,9 @@ type ButtonProps = {
   className?: string;
   children: React.ReactNode;
   disabled?: boolean;
-};
+} & HTMLAttributes<HTMLButtonElement>;
 
-const ButtonVariants = cva('rounded-md py-3 transition 0.1s', {
+const ButtonVariants = cva('rounded-md py-3 transition duration-100', {
   variants: {
     size: {
       full: 'w-full bold',
@@ -50,7 +51,7 @@ const ButtonVariants = cva('rounded-md py-3 transition 0.1s', {
     size: 'lg',
     color: 'white',
     bgColor: 'primary',
-    disabled: true,
+    disabled: false,
   },
 });
 
