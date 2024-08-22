@@ -33,7 +33,7 @@ const Input = forwardRef(function Input(
     className,
     ...props
   }: InputProps,
-  ref: ForwardedRef<HTMLDivElement>
+  ref: ForwardedRef<HTMLInputElement>
 ) {
   return (
     <div
@@ -43,9 +43,9 @@ const Input = forwardRef(function Input(
         className
       )}
       style={{ width }}
-      ref={ref}
     >
       <input
+        ref={ref}
         placeholder={placeholder}
         onChange={onChange}
         className="outline-0 placeholder:text-gray-300 text-sm"
