@@ -1,5 +1,6 @@
 import { cn } from '@/utils';
 import { cva } from 'class-variance-authority';
+import type { HTMLAttributes } from 'react';
 import { forwardRef } from 'react';
 
 type TextProps = {
@@ -9,7 +10,7 @@ type TextProps = {
   onClick?: () => void;
   className?: string;
   children: React.ReactNode;
-};
+} & HTMLAttributes<HTMLSpanElement>;
 
 const TextVariants = cva('', {
   variants: {
