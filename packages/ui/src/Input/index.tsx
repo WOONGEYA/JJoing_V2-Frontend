@@ -45,12 +45,12 @@ const Input = forwardRef(function Input(
       )}
       style={Style}
       ref={ref}
-      {...props}
     >
       <input
         placeholder={placeholder}
         className="outline-0 placeholder:text-gray-300 text-sm"
         style={{ width }}
+        {...props}
       />
     </div>
   );
