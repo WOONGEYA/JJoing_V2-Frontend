@@ -4,7 +4,7 @@ import { forwardRef } from 'react';
 
 type ButtonProps = {
   size?: 'full' | 'xl' | 'lg' | 'md' | 'sm';
-  color?: 'primary' | 'secondary' | 'black' | 'white' | 'gray';
+  color?: 'primary' | 'secondary' | 'white' | 'black' | 'gray';
   bgColor?: 'primary' | 'secondary' | 'black' | 'white' | 'gray';
   onClick?: () => void;
   className?: string;
@@ -22,17 +22,17 @@ const ButtonVariants = cva('rounded-md py-3 transition 0.1s', {
       sm: 'w-32 font-medium',
     },
     color: {
-      white: 'text-white',
-      black: 'text-black',
       primary: 'text-primary',
       secondary: 'text-secondary',
+      white: 'text-white',
+      black: 'text-black',
       gray: 'text-slate-300',
     },
     bgColor: {
-      white: 'bg-white',
-      black: 'bg-black',
       primary: 'bg-primary',
       secondary: 'bg-secondary',
+      white: 'bg-white',
+      black: 'bg-black',
       gray: 'bg-slate-400',
     },
     disabled: {
