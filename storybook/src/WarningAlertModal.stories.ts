@@ -1,16 +1,16 @@
-import { WarningAlertModal } from '@jjoing/ui';
+import { WarningAlert } from '@jjoing/ui';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'WarningAlertModal',
-  component: WarningAlertModal,
+  title: 'WarningAlert',
+  component: WarningAlert,
   tags: ['autodocs'],
-} satisfies Meta<typeof WarningAlertModal>;
+} satisfies Meta<typeof WarningAlert>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const DefaultWarningAlertModal: Story = {
+export const DefaultWarningAlert: Story = {
   args: {
     actionType: 'DELETE_PROJECT',
     onConfirm: () => {

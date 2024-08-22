@@ -1,13 +1,13 @@
 import { ForwardedRef, forwardRef } from 'react';
 
-type WarningAlertModalProps = {
+type WarningAlertProps = {
   actionType: 'DELETE_PROJECT' | 'DELETE_ALARM';
   onConfirm?: () => void;
   onCancel?: () => void;
 };
 
-const WarningAlertModal = forwardRef(function WarningAlertModal(
-  { actionType, onCancel, onConfirm, ...props }: WarningAlertModalProps,
+const WarningAlert = forwardRef(function WarningAlert(
+  { actionType, onCancel, onConfirm, ...props }: WarningAlertProps,
   ref: ForwardedRef<HTMLDivElement>
 ) {
   const AlertText = actionType === 'DELETE_PROJECT' ? '프로젝트' : '알람';
@@ -43,4 +43,4 @@ const WarningAlertModal = forwardRef(function WarningAlertModal(
   );
 });
 
-export default WarningAlertModal;
+export default WarningAlert;
