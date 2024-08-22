@@ -29,13 +29,12 @@ const Input = forwardRef(function Input(
     width = 250,
     color,
     placeholder = '검색어를 입력해주세요.',
+    onChange,
     className,
     ...props
   }: InputProps,
   ref: ForwardedRef<HTMLDivElement>
 ) {
-  const Style = { width };
-
   return (
     <div
       className={cn(
@@ -43,13 +42,13 @@ const Input = forwardRef(function Input(
         'border-[1.5px] flex py-2 px-3 rounded-[0.6rem] h-10 border-gray-300 focus-within:border-gray-400 transition duration-80 ease-in-out',
         className
       )}
-      style={Style}
+      style={{ width }}
       ref={ref}
     >
       <input
         placeholder={placeholder}
+        onChange={onChange}
         className="outline-0 placeholder:text-gray-300 text-sm"
-        style={{ width }}
         {...props}
       />
     </div>
