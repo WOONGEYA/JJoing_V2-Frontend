@@ -1,7 +1,6 @@
 import { cn } from '@/utils';
 import { cva } from 'class-variance-authority';
 import type { HTMLAttributes } from 'react';
-import { Flex } from '..';
 
 type SpinnerProps = {
   size?: 'lg' | 'md' | 'sm';
@@ -25,9 +24,9 @@ const SpinnerVariants = cva(
 
 const Spinner = ({ size }: SpinnerProps) => {
   return (
-    <Flex justify="center" items="center">
+    <div className="flex justify-center items-center">
       <div className={cn(SpinnerVariants({ size }))} />
-    </Flex>
+    </div>
   );
 };
 

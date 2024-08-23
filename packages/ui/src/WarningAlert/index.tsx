@@ -25,7 +25,7 @@ const WarningAlert = forwardRef(function WarningAlert(
         </h2>
         <h4 className="text-black">{`삭제한 ${AlertText}은 복구할 수 없습니다.`}</h4>
       </div>
-      <div className=" h-14 flex cursor-pointer">
+      <div className="h-14 flex cursor-pointer">
         <button
           onClick={onCancel}
           className="w-1/2 bg-gray-400 flex justify-center items-center text-white hover:bg-gray-500 rounded-bl-lg ease-in-out duration-100"
