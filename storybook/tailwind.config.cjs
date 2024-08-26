@@ -7,4 +7,5 @@ module.exports = {
     './node_modules/@jjoing/ui/src/**/*.{js,jsx,ts,tsx}',
     './src/**/*.{js,jsx,ts,tsx}',
   ],
+  plugins: [require('@tailwindcss/line-clamp')],
 };
