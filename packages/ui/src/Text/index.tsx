@@ -5,7 +5,7 @@ import { forwardRef } from 'react';
 
 type TextProps = {
   size?: 'xxl' | 'xl' | 'x' | 'lg' | 'md' | 'sm' | 'xs';
-  color?: 'white' | 'black' | 'primary' | 'secondary' | 'gray';
+  color?: 'white' | 'darkGray' | 'black' | 'primary' | 'secondary' | 'gray';
   weight?: 'bold' | 'semibold' | 'medium' | 'light';
   onClick?: () => void;
   className?: string;
@@ -28,7 +28,8 @@ const TextVariants = cva('', {
       black: 'text-black',
       primary: 'text-primary',
       secondary: 'text-secondary',
-      gray: 'text-slate-400',
+      gray: 'text-slate-600',
+      darkGray: 'text-slate-800',
     },
     weight: {
       bold: 'font-bold',

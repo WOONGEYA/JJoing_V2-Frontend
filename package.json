@@ -35,8 +35,5 @@
   "packageManager": "pnpm@8.15.6",
   "engines": {
     "node": ">=18"
-  },
-  "dependencies": {
-    "framer-motion": "12.0.0-alpha.0"
   }
 }

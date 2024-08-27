@@ -9,9 +9,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      ...sharedConfig.theme?.extend,
       fontFamily: {
         pretendard: ['var(--font-pretendard)'],
       },
     },
   },
+  plugins: [],
 };

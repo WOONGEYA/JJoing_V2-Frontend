@@ -136,12 +136,6 @@ table {
 
 @layer utilities {
   .bg-main-gradient {
-    background: linear-gradient(
-      to right,
-      rgb(159, 255, 193) 0%,
-      rgb(221, 255, 234) 30%,
-      rgb(245, 255, 249) 70%,
-      rgba(255, 255, 255, 1) 100%
-    );
+    background: linear-gradient(to right, #e1fff2 0%, #f7fffc 30%, white 70%, white 100%);
   }
 }
