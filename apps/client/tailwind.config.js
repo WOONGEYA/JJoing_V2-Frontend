@@ -7,4 +7,11 @@ module.exports = {
     './src/**/*.{js,jsx,ts,tsx}',
     './node_modules/@jjoing/ui/src/**/*.{js,jsx,ts,tsx}',
   ],
+  theme: {
+    extend: {
+      fontFamily: {
+        pretendard: ['var(--font-pretendard)'],
+      },
+    },
+  },
 };

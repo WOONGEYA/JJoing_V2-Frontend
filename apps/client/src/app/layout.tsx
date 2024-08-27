@@ -1,10 +1,9 @@
 import Providers from '@/providers/Providers';
 import '@/styles/globals.css';
-import { Metadata } from 'next';
 import { PropsWithChildren } from 'react';
 import { pretendard } from './fonts';
 
-export const metadata: Metadata = { title: '쪼잉' };
+export const metadata = { title: '쪼잉' };
 
 const RootLayout = ({ children }: PropsWithChildren) => {
   return (
