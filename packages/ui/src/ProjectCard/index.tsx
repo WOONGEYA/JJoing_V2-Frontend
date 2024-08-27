@@ -71,7 +71,7 @@ const ProjectCard = forwardRef(function ProjectCard(
               <Text size="sm">{viewCount}</Text>
             </div>
             <div className="flex items-center gap-1">
-              <FiHeart className="mt-[0.5px]" />
+              <FiHeart className="mt-[1.3px]" />
               <Text size="sm">{heartCount}</Text>
             </div>
           </div>
