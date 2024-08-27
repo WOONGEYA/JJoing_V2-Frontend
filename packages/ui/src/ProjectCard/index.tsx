@@ -35,7 +35,7 @@ const ProjectCard = forwardRef(function ProjectCard(
     <div className="size-[328px] border border-gray-300 bg-white rounded-lg" ref={ref}>
       <div
         onClick={onClick}
-        className="flex items-center justify-center h-[190px] rounded-t-lg border-b-[1.5px] border-b-gray-300 cursor-pointer overflow-hidden"
+        className="flex items-center justify-center h-[190px] rounded-t-lg border-b-[1.5px] border-gray-300 cursor-pointer overflow-hidden"
       >
         <div className={`relative size-full rounded-t-lg ${!imageUrl && 'bg-gray-200'}`}>
           {imageUrl && (

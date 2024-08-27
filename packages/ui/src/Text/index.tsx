@@ -4,7 +4,7 @@ import type { HTMLAttributes } from 'react';
 import { forwardRef } from 'react';
 
 type TextProps = {
-  size?: 'xl' | 'x' | 'lg' | 'md' | 'sm' | 'xs';
+  size?: 'xxl' | 'xl' | 'x' | 'lg' | 'md' | 'sm' | 'xs';
   color?: 'white' | 'black' | 'primary' | 'secondary' | 'gray';
   weight?: 'bold' | 'semibold' | 'medium' | 'light';
   onClick?: () => void;
@@ -15,7 +15,8 @@ type TextProps = {
 const TextVariants = cva('', {
   variants: {
     size: {
-      xl: 'text-3xl leading-[22px]',
+      xxl: 'text-[57px] leading-[63px]',
+      xl: 'text-5xl leading-[58px]',
       x: 'text-2xl',
       lg: 'text-xl',
       md: 'text-lg',

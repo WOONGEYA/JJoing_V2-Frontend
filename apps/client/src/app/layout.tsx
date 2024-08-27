@@ -1,3 +1,4 @@
+import { Header } from '@/components/layouts';
 import Providers from '@/providers/Providers';
 import '@/styles/globals.css';
 import { PropsWithChildren } from 'react';
@@ -10,7 +11,8 @@ const RootLayout = ({ children }: PropsWithChildren) => {
     <html lang="kr">
       <body className={`${pretendard.variable}`}>
         <Providers>
-          <div className="font-pretendard">{children}</div>
+          <Header />
+          <div className="font-pretendard pt-[64px]">{children}</div>
         </Providers>
       </body>
     </html>

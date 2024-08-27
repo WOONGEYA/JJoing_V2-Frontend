@@ -129,3 +129,19 @@ table {
 .cursor-p {
   cursor: pointer;
 }
+
+.content-container {
+  height: calc(100vh - 64px);
+}
+
+@layer utilities {
+  .bg-main-gradient {
+    background: linear-gradient(
+      to right,
+      rgb(159, 255, 193) 0%,
+      rgb(221, 255, 234) 30%,
+      rgb(245, 255, 249) 70%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+}
