@@ -139,3 +139,19 @@ table {
     background: linear-gradient(to right, #e1fff2 0%, #f7fffc 30%, white 70%, white 100%);
   }
 }
+
+@keyframes floatMouse {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bounce {
+  animation: floatMouse 1.3s ease-in-out infinite;
+}
