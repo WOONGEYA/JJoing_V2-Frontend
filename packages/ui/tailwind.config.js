@@ -9,6 +9,14 @@ module.exports = {
         primaryHover: '#257250',
         secondaryHover: '#182A3E',
       },
+      fontSize: {
+        '1.5xl': [
+          '22px',
+          {
+            lineHeight: '29px',
+          },
+        ],
+      },
     },
   },
   plugins: [],

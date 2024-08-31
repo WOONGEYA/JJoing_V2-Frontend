@@ -43,7 +43,9 @@ const IntroduceJJoing = () => {
               <div className="flex items-center justify-center rounded-[50%] size-12 bg-gray-100 cursor-pointer bounce">
                 <Image src={MouseIcon} width={20} height={20} alt="mouse-icon" />
               </div>
-              <Text size="xs">스크롤을 내려주세요.</Text>
+              <Text size="xs" color="gray400">
+                스크롤을 내려주세요.
+              </Text>
             </div>
           </div>
           <div className="w-[400px] flex items-end justify-end">
