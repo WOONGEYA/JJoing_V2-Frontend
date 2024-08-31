@@ -1,16 +1,26 @@
-import { cn } from '@/utils';
 import { cva } from 'class-variance-authority';
 import type { HTMLAttributes } from 'react';
 import { forwardRef } from 'react';
+import { cn } from '../utils';
 
 type TextProps = {
   size?: 'xxl' | 'xl' | 'x' | 'lg' | 'md' | 'sm' | 'xs';
-  color?: 'white' | 'darkGray' | 'black' | 'primary' | 'secondary' | 'gray';
+  color?: keyof typeof colors;
   weight?: 'bold' | 'semibold' | 'medium' | 'light';
   onClick?: () => void;
   className?: string;
   children: React.ReactNode;
 } & HTMLAttributes<HTMLSpanElement>;
+
+const colors = {
+  white: 'text-white',
+  black: 'text-black',
+  primary: 'text-primary',
+  secondary: 'text-secondary',
+  gray400: 'text-gray-400',
+  gray: 'text-slate-600',
+  gray800: 'text-slate-800',
+};
 
 const TextVariants = cva('', {
   variants: {
@@ -24,12 +34,7 @@ const TextVariants = cva('', {
       xs: 'text-sm',
     },
     color: {
-      white: 'text-white',
-      black: 'text-black',
-      primary: 'text-primary',
-      secondary: 'text-secondary',
-      gray: 'text-slate-600',
-      darkGray: 'text-slate-800',
+      ...colors,
     },
     weight: {
       bold: 'font-bold',
@@ -39,7 +44,7 @@ const TextVariants = cva('', {
     },
     defaultVariants: {
       size: 'md',
-      color: 'black',
+      color: 'gray800',
       weight: 'medium',
     },
   },

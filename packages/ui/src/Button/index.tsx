@@ -1,7 +1,7 @@
-import { cn } from '@/utils';
 import { cva } from 'class-variance-authority';
 import type { HTMLAttributes } from 'react';
 import { forwardRef } from 'react';
+import { cn } from '../utils';
 
 type ButtonProps = {
   size?: 'full' | 'xl' | 'lg' | 'md' | 'sm';

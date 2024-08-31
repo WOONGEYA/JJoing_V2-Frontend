@@ -1,9 +1,9 @@
-import Text from '@/Text';
 import type { ForwardedRef } from 'react';
 import { forwardRef } from 'react';
 import { FaEye } from 'react-icons/fa6';
 import { FiHeart } from 'react-icons/fi';
 import { IoPeopleSharp } from 'react-icons/io5';
+import Text from '../Text';
 
 type ProjectCardProps = {
   imageUrl?: string;

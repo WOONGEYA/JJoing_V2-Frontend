@@ -1,6 +1,6 @@
-import { cn } from '@/utils';
 import { cva } from 'class-variance-authority';
 import type { HTMLAttributes } from 'react';
+import { cn } from '../utils';
 
 type SpinnerProps = {
   size?: 'lg' | 'md' | 'sm';
