@@ -11,7 +11,7 @@ module.exports = {
       },
       fontSize: {
         '1.5xl': [
-          '22px',
+          '24px',
           {
             lineHeight: '29px',
           },

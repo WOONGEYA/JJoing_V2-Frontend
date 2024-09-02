@@ -41,13 +41,7 @@ const IntroduceJJoing = () => {
           <div className="flex items-end mb-8">
             <div className="flex flex-col items-center gap-3" onClick={handleScroll}>
               <div className="flex items-center justify-center rounded-[50%] size-12 bg-gray-100 cursor-pointer bounce">
-                <Image
-                  src={MouseIcon}
-                  width={20}
-                  height={20}
-                  alt="mouse-icon"
-                  priority={true}
-                />
+                <Image src={MouseIcon} width={20} height={20} alt="mouse-icon" priority />
               </div>
               <Text size="xs" color="gray400">
                 스크롤을 내려주세요.

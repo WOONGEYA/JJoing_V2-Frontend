@@ -13,9 +13,15 @@ const Header = () => {
           <Link href="/">
             <Image className="cursor-p" src={MainLogo} width={80} height={25} alt="img" />
           </Link>
-          <Text className="cursor-p">프로젝트 목록</Text>
-          <Text className="cursor-p">새 프로젝트</Text>
-          <Text className="cursor-p">게시판</Text>
+          <Text size="md" className="cursor-p">
+            프로젝트 목록
+          </Text>
+          <Text size="md" className="cursor-p">
+            새 프로젝트
+          </Text>
+          <Text size="md" className="cursor-p">
+            게시판
+          </Text>
         </div>
         <div className="flex items-center gap-6 ">
           <Image
