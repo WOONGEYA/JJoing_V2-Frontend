@@ -33,15 +33,21 @@ const IntroduceJJoing = () => {
                 당신의 아이디어를 현실로 만들 팀원을 구해보세요! <br />
                 쪼잉은 더 나은 프로젝트 경험을 위해 시작되었습니다.
               </Text>
-              <Button outline={true} round="3xl" size="md">
-                <Text>시작하기 {'>'}</Text>
+              <Button outline={true} round="3xl" size="md" className="text-gray-800">
+                시작하기 {'>'}
               </Button>
             </div>
           </div>
           <div className="flex items-end mb-8">
             <div className="flex flex-col items-center gap-3" onClick={handleScroll}>
               <div className="flex items-center justify-center rounded-[50%] size-12 bg-gray-100 cursor-pointer bounce">
-                <Image src={MouseIcon} width={20} height={20} alt="mouse-icon" />
+                <Image
+                  src={MouseIcon}
+                  width={20}
+                  height={20}
+                  alt="mouse-icon"
+                  priority={true}
+                />
               </div>
               <Text size="xs" color="gray400">
                 스크롤을 내려주세요.

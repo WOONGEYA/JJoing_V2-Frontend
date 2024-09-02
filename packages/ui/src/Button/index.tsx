@@ -15,7 +15,7 @@ type ButtonProps = {
   disabled?: boolean;
 } & HTMLAttributes<HTMLButtonElement>;
 
-const ButtonVariants = cva('transition duration-100', {
+const ButtonVariants = cva('transition duration-150', {
   variants: {
     size: {
       full: 'w-full bold text-2xl py-3',

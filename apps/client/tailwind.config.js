@@ -9,7 +9,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      ...sharedConfig.theme?.extend,
+      colors: {
+        ...sharedConfig.theme?.extend.colors,
+        lightPrimary: '#7DC7A4',
+      },
       fontFamily: {
         pretendard: ['var(--font-pretendard)'],
       },

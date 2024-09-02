@@ -1,6 +1,8 @@
+import { InterviewMeta } from '@/constants';
 import { Text } from '@jjoing/ui';
 import { RefObject } from 'react';
 import { Container, Wrapper } from '../layouts';
+import InterviewCard from './interviewCard';
 
 type InterviewJJoingProps = {
   mouseRef: RefObject<HTMLDivElement>;
@@ -11,7 +13,7 @@ const InterviewJJoing = ({ mouseRef }: InterviewJJoingProps) => {
     <Container className="content-container">
       <Wrapper
         ref={mouseRef}
-        className="h-full flex flex-col items-center justify-center"
+        className="h-full flex flex-col items-center justify-center gap-8"
       >
         <Text size="md" color="gray">
           Interview
@@ -23,6 +25,11 @@ const InterviewJJoing = ({ mouseRef }: InterviewJJoingProps) => {
           </Text>
           에 대해 물어보았습니다.
         </Text>
+        <div className="h-[380px] mt-10 w-[1082px] grid grid-cols-3 gap-[20px] items-center">
+          {InterviewMeta.map((interview) => (
+            <InterviewCard key={interview.id} {...interview} />
+          ))}
+        </div>
       </Wrapper>
     </Container>
   );

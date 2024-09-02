@@ -5,22 +5,12 @@ import { cn } from '../utils';
 
 type TextProps = {
   size?: 'xxl' | 'xl' | 'x' | 'lg' | 'md' | 'sm' | 'xs';
-  color?: keyof typeof colors;
+  color?: 'white' | 'black' | 'primary' | 'secondary' | 'gray400' | 'gray' | 'gray800';
   weight?: 'bold' | 'semibold' | 'medium' | 'light';
   onClick?: () => void;
   className?: string;
   children: React.ReactNode;
 } & HTMLAttributes<HTMLSpanElement>;
-
-const colors = {
-  white: 'text-white',
-  black: 'text-black',
-  primary: 'text-primary',
-  secondary: 'text-secondary',
-  gray400: 'text-gray-400',
-  gray: 'text-slate-600',
-  gray800: 'text-slate-800',
-};
 
 const TextVariants = cva('', {
   variants: {
@@ -34,7 +24,13 @@ const TextVariants = cva('', {
       xs: 'text-sm',
     },
     color: {
-      ...colors,
+      white: 'text-white',
+      black: 'text-black',
+      primary: 'text-primary',
+      secondary: 'text-secondary',
+      gray400: 'text-gray-400',
+      gray: 'text-slate-600',
+      gray800: 'text-slate-800',
     },
     weight: {
       bold: 'font-bold',
@@ -42,11 +38,11 @@ const TextVariants = cva('', {
       medium: 'font-medium',
       light: 'font-light',
     },
-    defaultVariants: {
-      size: 'md',
-      color: 'gray800',
-      weight: 'medium',
-    },
+  },
+  defaultVariants: {
+    size: 'lg',
+    color: 'gray800',
+    weight: 'medium',
   },
 });
 
