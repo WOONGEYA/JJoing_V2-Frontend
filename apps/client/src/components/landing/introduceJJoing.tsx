@@ -2,10 +2,15 @@
 
 import { ImagineProjectIcon, MouseIcon } from '@/assets/images';
 import { Button, Text } from '@jjoing/ui';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { Container, Sticker, Wrapper } from '../layouts';
-import InterviewJJoing from './interviewJJoing';
+import PromotionSolutionJJoing from './promotionSolutionJJoing';
+
+const InterviewJJoing = dynamic(() => import('./interviewJJoing'), {
+  ssr: false,
+});
 
 const IntroduceJJoing = () => {
   const mouseRef = useRef<HTMLDivElement>(null);
@@ -41,7 +46,14 @@ const IntroduceJJoing = () => {
           <div className="flex items-end mb-8">
             <div className="flex flex-col items-center gap-3" onClick={handleScroll}>
               <div className="flex items-center justify-center rounded-[50%] size-12 bg-gray-100 cursor-pointer bounce">
-                <Image src={MouseIcon} width={20} height={20} alt="mouse-icon" priority />
+                <Image
+                  src={MouseIcon}
+                  layout="intrinsic"
+                  width={20}
+                  height={20}
+                  alt="mouse-icon"
+                  priority
+                />
               </div>
               <Text size="xs" color="gray400">
                 스크롤을 내려주세요.
@@ -49,11 +61,12 @@ const IntroduceJJoing = () => {
             </div>
           </div>
           <div className="w-[400px] flex items-end justify-end">
-            <Sticker stickerUrl={ImagineProjectIcon} width={395} height={382} />
+            <Sticker stickerUrl={ImagineProjectIcon} width={380} height={384} />
           </div>
         </Wrapper>
       </Container>
       <InterviewJJoing mouseRef={mouseRef} />
+      <PromotionSolutionJJoing />
     </>
   );
 };

@@ -1,4 +1,4 @@
-import { Header } from '@/components/layouts';
+import { Footer, Header } from '@/components/layouts';
 import Providers from '@/providers/Providers';
 import '@/styles/globals.css';
 import { PropsWithChildren } from 'react';
@@ -13,6 +13,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
         <Providers>
           <Header />
           <div className="font-pretendard pt-[64px]">{children}</div>
+          <Footer />
         </Providers>
       </body>
     </html>
