@@ -16,6 +16,9 @@ module.exports = {
       fontFamily: {
         pretendard: ['var(--font-pretendard)'],
       },
+      fontSize: {
+        ...sharedConfig.theme?.extend.fontSize,
+      },
     },
   },
   plugins: [],

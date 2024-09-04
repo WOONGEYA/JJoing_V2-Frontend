@@ -6,7 +6,6 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { Container, Sticker, Wrapper } from '../layouts';
-import PromotionSolutionJJoing from './promotionSolutionJJoing';
 
 const InterviewJJoing = dynamic(() => import('./interviewJJoing'), {
   ssr: false,
@@ -66,7 +65,6 @@ const IntroduceJJoing = () => {
         </Wrapper>
       </Container>
       <InterviewJJoing mouseRef={mouseRef} />
-      <PromotionSolutionJJoing />
     </>
   );
 };

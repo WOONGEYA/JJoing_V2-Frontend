@@ -21,11 +21,9 @@ const InterviewCard = ({
   needs,
   icon,
 }: InterviewCardProps) => {
-  const inconvenienceText = inconvenience.split('\n');
-
   return (
     <m.div
-      className="border-2 border-lightPrimary w-[349px] h-[327px] rounded-3xl p-5"
+      className="border-2 border-lightPrimary w-[349px] h-[327px] rounded-3xl p-5 bg-white"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeInOut', delay: id * 0.1 }}
@@ -40,10 +38,8 @@ const InterviewCard = ({
               {developmentField}
             </Text>
           </div>
-          <Text weight="medium" size="lg" className="leading-6">
-            "{inconvenienceText[0]}
-            <br />
-            {inconvenienceText[1]}"
+          <Text weight="medium" size="lg" className="leading-6 whitespace-pre-line">
+            "{inconvenience}"
           </Text>
         </div>
         <Image src={icon} width={94} height={140} alt="icon" />

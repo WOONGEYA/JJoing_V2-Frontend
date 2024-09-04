@@ -20,7 +20,7 @@ export const Sticker = ({ stickerUrl, width, height }: StickerProps) => {
         scale: { type: 'spring', damping: 8, stiffness: 100, restDelta: 0.001 },
       }}
     >
-      <Image alt="Target" src={stickerUrl} width={width} height={height} priority />
+      <Image alt="sticker" src={stickerUrl} width={width} height={height} priority />
     </m.div>
   );
 };

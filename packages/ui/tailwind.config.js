@@ -10,8 +10,14 @@ module.exports = {
         secondaryHover: '#182A3E',
       },
       fontSize: {
-        '1.5xl': [
+        f24: [
           '24px',
+          {
+            lineHeight: '29px',
+          },
+        ],
+        f34: [
+          '34px',
           {
             lineHeight: '29px',
           },

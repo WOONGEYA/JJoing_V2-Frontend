@@ -1,5 +1,5 @@
-import { IntroduceJJoing } from '@/components/landing';
+import LandingPage from '@/components/landing/landing';
 
 export default function HomePage() {
-  return <IntroduceJJoing />;
+  return <LandingPage />;
 }
