@@ -1,7 +1,7 @@
 export { default as AlarmIcon } from './alarm-icon.svg';
 export { default as Cooperation } from './cooperation.webp';
 export { default as GithubIcon } from './github-icon.svg';
-export { default as ImagineProjectIcon } from './imagineProject-icon.svg';
+export { default as ImagineIcon } from './imagine-icon.svg';
 export { default as ImproveSkillIcon } from './improveSkill.webp';
 export { default as Interviewer1 } from './interviewer01.svg';
 export { default as Interviewer2 } from './interviewer02.svg';

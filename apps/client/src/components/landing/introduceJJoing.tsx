@@ -1,6 +1,6 @@
 'use client';
 
-import { ImagineProjectIcon, MouseIcon } from '@/assets/images';
+import { ImagineIcon, MouseIcon } from '@/assets/images';
 import { Button, Text } from '@jjoing/ui';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
@@ -60,7 +60,7 @@ const IntroduceJJoing = () => {
             </div>
           </div>
           <div className="w-[400px] flex items-end justify-end">
-            <Sticker stickerUrl={ImagineProjectIcon} width={380} height={384} />
+            <Sticker stickerUrl={ImagineIcon} width={380} height={384} />
           </div>
         </Wrapper>
       </Container>
