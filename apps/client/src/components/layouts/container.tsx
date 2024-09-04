@@ -6,7 +6,7 @@ type ContainerProps = {
 };
 
 const Container = ({ children, className }: ContainerProps) => {
-  return <section className={cn('w-full', className)}>{children}</section>;
+  return <main className={cn('w-full', className)}>{children}</main>;
 };
 
 export default Container;

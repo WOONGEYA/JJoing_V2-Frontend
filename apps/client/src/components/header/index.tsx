@@ -1,9 +1,7 @@
-import { AlarmIcon, MainLogo } from '@/assets/images';
 import { Text } from '@jjoing/ui';
 import Image from 'next/image';
 import Link from 'next/link';
-import Container from './container';
-import Wrapper from './wrapper';
+import { Container, Wrapper } from '../layouts';
 
 const Header = () => {
   return (
@@ -11,7 +9,13 @@ const Header = () => {
       <Wrapper className="h-[64px] flex items-center justify-between">
         <div className="flex items-center gap-12">
           <Link href="/">
-            <Image className="cursor-p" src={MainLogo} width={80} height={25} alt="img" />
+            <Image
+              className="cursor-p"
+              src="/images/logo.svg"
+              width={80}
+              height={25}
+              alt="img"
+            />
           </Link>
           <Text size="md" className="cursor-p">
             프로젝트 목록
@@ -26,7 +30,7 @@ const Header = () => {
         <div className="flex items-center gap-6 ">
           <Image
             className="cursor-p"
-            src={AlarmIcon}
+            src="images/alarm-icon.svg"
             width={22}
             height={22}
             alt="alarm"

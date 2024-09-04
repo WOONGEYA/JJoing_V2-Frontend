@@ -1,10 +1,10 @@
 'use client';
 
-import { ImagineIcon, MouseIcon } from '@/assets/images';
+import { useSrcollToRef } from '@/hooks';
 import { Button, Text } from '@jjoing/ui';
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
 import { useRef } from 'react';
+import { BsMouse } from 'react-icons/bs';
 import { Container, Sticker, Wrapper } from '../layouts';
 
 const InterviewJJoing = dynamic(() => import('./interviewJJoing'), {
@@ -13,10 +13,7 @@ const InterviewJJoing = dynamic(() => import('./interviewJJoing'), {
 
 const IntroduceJJoing = () => {
   const mouseRef = useRef<HTMLDivElement>(null);
-
-  const handleScroll = () => {
-    if (mouseRef.current) mouseRef.current.scrollIntoView({ behavior: 'smooth' });
-  };
+  const handleScroll = useSrcollToRef(mouseRef);
 
   return (
     <>
@@ -45,14 +42,7 @@ const IntroduceJJoing = () => {
           <div className="flex items-end mb-8">
             <div className="flex flex-col items-center gap-3" onClick={handleScroll}>
               <div className="flex items-center justify-center rounded-[50%] size-12 bg-gray-100 cursor-pointer bounce">
-                <Image
-                  src={MouseIcon}
-                  layout="intrinsic"
-                  width={20}
-                  height={20}
-                  alt="mouse-icon"
-                  priority
-                />
+                <BsMouse className="size-[25px] font-medium text-gray-400" />
               </div>
               <Text size="xs" color="gray400">
                 스크롤을 내려주세요.
@@ -60,7 +50,7 @@ const IntroduceJJoing = () => {
             </div>
           </div>
           <div className="w-[400px] flex items-end justify-end">
-            <Sticker stickerUrl={ImagineIcon} width={380} height={384} />
+            <Sticker stickerUrl="/images/imagine-icon.svg" width={380} height={384} />
           </div>
         </Wrapper>
       </Container>

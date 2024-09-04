@@ -1,4 +1,5 @@
-import { Footer, Header } from '@/components/layouts';
+import Footer from '@/components/footer';
+import Header from '@/components/header';
 import Providers from '@/providers/Providers';
 import '@/styles/globals.css';
 import { PropsWithChildren } from 'react';

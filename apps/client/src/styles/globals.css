@@ -134,12 +134,6 @@ table {
   height: calc(100vh - 64px);
 }
 
-@layer utilities {
-  .bg-main-gradient {
-    background: linear-gradient(to right, #e1fff2 0%, #f7fffc 30%, white 70%, white 100%);
-  }
-}
-
 @keyframes floatMouse {
   0% {
     transform: translateY(0);
