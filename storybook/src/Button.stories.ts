@@ -18,5 +18,6 @@ export const DefaultButton: Story = {
     size: 'md',
     color: 'white',
     bgColor: 'primary',
+    round: '3xl',
   },
 };

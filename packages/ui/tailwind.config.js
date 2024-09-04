@@ -9,6 +9,20 @@ module.exports = {
         primaryHover: '#257250',
         secondaryHover: '#182A3E',
       },
+      fontSize: {
+        f24: [
+          '24px',
+          {
+            lineHeight: '29px',
+          },
+        ],
+        f34: [
+          '34px',
+          {
+            lineHeight: '29px',
+          },
+        ],
+      },
     },
   },
   plugins: [],

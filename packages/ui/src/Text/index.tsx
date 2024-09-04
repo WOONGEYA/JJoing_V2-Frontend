@@ -1,11 +1,11 @@
-import { cn } from '@/utils';
 import { cva } from 'class-variance-authority';
 import type { HTMLAttributes } from 'react';
 import { forwardRef } from 'react';
+import { cn } from '../utils';
 
 type TextProps = {
-  size?: 'xl' | 'x' | 'lg' | 'md' | 'sm' | 'xs';
-  color?: 'white' | 'black' | 'primary' | 'secondary' | 'gray';
+  size?: 'xxl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs';
+  color?: 'white' | 'black' | 'primary' | 'secondary' | 'gray400' | 'gray' | 'gray800';
   weight?: 'bold' | 'semibold' | 'medium' | 'light';
   onClick?: () => void;
   className?: string;
@@ -15,8 +15,8 @@ type TextProps = {
 const TextVariants = cva('', {
   variants: {
     size: {
-      xl: 'text-3xl leading-[22px]',
-      x: 'text-2xl',
+      xxl: 'text-[57px] leading-[63px]',
+      xl: 'text-5xl leading-[58px]',
       lg: 'text-xl',
       md: 'text-lg',
       sm: 'text-base',
@@ -27,7 +27,9 @@ const TextVariants = cva('', {
       black: 'text-black',
       primary: 'text-primary',
       secondary: 'text-secondary',
-      gray: 'text-slate-400',
+      gray400: 'text-gray-400',
+      gray: 'text-slate-600',
+      gray800: 'text-slate-800',
     },
     weight: {
       bold: 'font-bold',
@@ -35,11 +37,11 @@ const TextVariants = cva('', {
       medium: 'font-medium',
       light: 'font-light',
     },
-    defaultVariants: {
-      size: 'md',
-      color: 'black',
-      weight: 'medium',
-    },
+  },
+  defaultVariants: {
+    size: 'lg',
+    color: 'gray800',
+    weight: 'medium',
   },
 });
 
