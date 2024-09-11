@@ -48,31 +48,31 @@ const ProjectCard = forwardRef(function ProjectCard(
       </div>
       <div className="h-[138px] rounded-b-lg px-3 py-2 flex flex-col justify-between">
         <div onClick={onClick} className="cursor-pointer">
-          <Text size="md" weight="medium" className="truncate">
+          <Text type="body2" className="truncate">
             {title}
           </Text>
-          <Text size="xs" className="line-clamp-2 text-gray-500 mt-[2px]">
+          <Text type="body3" className="line-clamp-2 text-gray-500 mt-[2px]">
             {subTitle}
           </Text>
         </div>
         <div className="flex justify-between mb-1">
           <div className="flex items-center px-2 py-1 border border-blue-500 rounded-md bg-blue-50">
-            <Text size="xs">{projectDeadline}</Text>
+            <Text type="body3">{projectDeadline}</Text>
           </div>
-          <div className="flex gap-5 text-secondary">
+          <div className="flex items-center gap-5 text-secondary">
             <div className="flex items-center gap-1">
               <IoPeopleSharp />
-              <Text size="sm">
+              <Text type="body3">
                 {currentProjectMembers}/{maxProjectMembers}
               </Text>
             </div>
             <div className="flex items-center gap-1">
               <FaEye />
-              <Text size="sm">{viewCount}</Text>
+              <Text type="body3">{viewCount}</Text>
             </div>
             <div className="flex items-center gap-1">
               <FiHeart className="mt-[1.3px]" />
-              <Text size="sm">{heartCount}</Text>
+              <Text type="body3">{heartCount}</Text>
             </div>
           </div>
         </div>

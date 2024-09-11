@@ -25,9 +25,6 @@ const buttonVariants = cva(
         '3xl': 'rounded-3xl',
         full: 'rounded-full',
       },
-      width: {
-        full: 'w-full',
-      },
       height: {
         h64: 'h-[64px]',
         h55: 'h-[55px]',
@@ -37,21 +34,23 @@ const buttonVariants = cva(
     defaultVariants: {
       bgColor: 'primary',
       rounded: 'lg',
-      width: 'full',
       height: 'h55',
     },
   }
 );
 
 type ButtonProps = VariantProps<typeof buttonVariants> &
-  ButtonHTMLAttributes<HTMLButtonElement>;
+  ButtonHTMLAttributes<HTMLButtonElement> & {
+    width?: number | '100%';
+  };
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, bgColor, rounded, width, height, children, ...props }, ref) => {
+  ({ className, bgColor, rounded, width = '100%', height, children, ...props }, ref) => {
     return (
       <button
         ref={ref}
-        className={cn(buttonVariants({ bgColor, rounded, width, height }), className)}
+        className={cn(buttonVariants({ bgColor, rounded, height }), className)}
+        style={{ width }}
         {...props}
       >
         {children}
