@@ -4,10 +4,16 @@ import type { Meta, StoryObj } from '@storybook/react';
 const meta = {
   title: 'Spinner',
   component: Spinner,
-  tags: ['autodocs'],
+  argTypes: {
+    size: {
+      control: 'inline-radio',
+      options: ['lg', 'md', 'sm'],
+    },
+  },
 } satisfies Meta<typeof Spinner>;
 
 export default meta;
+
 type Story = StoryObj<typeof meta>;
 
 export const DefaultSpinner: Story = {
