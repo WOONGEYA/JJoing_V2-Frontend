@@ -15,5 +15,6 @@ export const DefaultInput: Story = {
     width: 300,
     color: 'black',
     placeholder: '협업툴을 입력해주세요',
+    className: 'bg-orange-500',
   },
 };
