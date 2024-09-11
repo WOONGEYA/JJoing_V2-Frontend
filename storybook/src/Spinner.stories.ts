@@ -6,7 +6,7 @@ const meta = {
   component: Spinner,
   argTypes: {
     size: {
-      control: 'inline-radio',
+      control: 'inline-check',
       options: ['lg', 'md', 'sm'],
     },
   },

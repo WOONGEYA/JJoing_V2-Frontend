@@ -18,7 +18,9 @@ const InputVariants = cva('', {
 });
 
 type InputProps = VariantProps<typeof InputVariants> &
-  InputHTMLAttributes<HTMLInputElement>;
+  InputHTMLAttributes<HTMLInputElement> & {
+    width?: number | '100%';
+  };
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
   (

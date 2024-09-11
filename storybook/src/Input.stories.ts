@@ -6,7 +6,7 @@ const meta: Meta<typeof Input> = {
   component: Input,
   argTypes: {
     color: {
-      control: 'inline-radio',
+      control: 'inline-check',
       options: ['primary', 'secondary', 'white', 'black', 'gray'],
     },
   },
@@ -18,7 +18,7 @@ type Story = StoryObj<typeof meta>;
 
 export const DefaultInput: Story = {
   args: {
-    width: '500px',
+    width: '100%',
     placeholder: '내용을 입력해주세요.',
   },
 };

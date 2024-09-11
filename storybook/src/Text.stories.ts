@@ -6,7 +6,7 @@ const meta = {
   component: Text,
   argTypes: {
     type: {
-      control: 'inline-radio',
+      control: 'inline-check',
       options: ['heading', 'title1', 'title2', 'body1', 'body2', 'body3'],
     },
   },
