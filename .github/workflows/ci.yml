@@ -11,14 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set up Node.js
+      - name: Set up Node.js and pnpm
         uses: actions/setup-node@v3
         with:
           node-version: 18
-
-      - name: Set up shell
-        run: |
-          sudo ln -sf /bin/bash /bin/sh
 
       - name: Check out code
         uses: actions/checkout@v4
@@ -33,17 +29,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Install dependencies
-        run: npm install -g pnpm
-
-      - name: Check npm version
-        run: npm --version
-
-      - name: Check pnpm version
-        run: pnpm --version
-
-      - name: Install project dependencies
-        run: pnpm install
+      - name: Install pnpm and project dependencies
+        run: |
+          npm install -g pnpm
+          pnpm install
 
       - name: Build
         run: pnpm run build
