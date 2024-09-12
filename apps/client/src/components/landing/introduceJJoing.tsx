@@ -3,6 +3,7 @@
 import { useSrcollToRef } from '@/hooks';
 import { Button, Text } from '@jjoing/ui';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 import { useRef } from 'react';
 import { BsMouse } from 'react-icons/bs';
 import { IoIosArrowForward } from 'react-icons/io';
@@ -35,11 +36,13 @@ const IntroduceJJoing = () => {
                 당신의 아이디어를 현실로 만들 팀원을 구해보세요! <br />
                 쪼잉은 더 나은 프로젝트 경험을 위해 시작되었습니다.
               </Text>
-              <Button bgColor="borderPrimary" width={140} height="h50" rounded="full">
-                <span className="flex items-center gap-[2px] text-xl font-medium">
-                  시작하기 <IoIosArrowForward />
-                </span>
-              </Button>
+              <Link href="/projects">
+                <Button bgColor="borderPrimary" width={140} height="h50" rounded="full">
+                  <span className="flex items-center gap-[2px] text-xl font-medium">
+                    시작하기 <IoIosArrowForward />
+                  </span>
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="flex items-end mb-8">

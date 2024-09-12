@@ -1,6 +1,6 @@
 'use client';
 
-import { PromotionMeta } from '@/constants/promotionMetadata';
+import { PromotionMeta } from '@/constants';
 import { Text } from '@jjoing/ui';
 import { useState } from 'react';
 import { IoIosArrowForward } from 'react-icons/io';
@@ -23,7 +23,7 @@ const PromotionJJoing = () => {
               solutions
             </Text>
             <div className="flex flex-col gap-6">
-              <span className="text-f34 font-semibold text-gray-800">서비스 소개</span>
+              <span className="text-f32 font-semibold text-gray-800">서비스 소개</span>
               <Text type="body1" className="leading-5 text-gray-800">
                 쪼잉에서{' '}
                 <Text type="body1" className="leading-5 text-primary">

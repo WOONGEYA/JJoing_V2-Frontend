@@ -5,8 +5,8 @@ export const fontSize = {
       lineHeight: '29px',
     },
   ],
-  f34: [
-    '24px',
+  f32: [
+    '32px',
     {
       lineHeight: '29px',
     },
