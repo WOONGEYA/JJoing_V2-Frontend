@@ -4,9 +4,11 @@ import type { Meta, StoryObj } from '@storybook/react';
 const meta = {
   title: 'Textarea',
   component: Textarea,
-  tags: ['autodocs'],
-  args: {
-    children: '웅이야',
+  argTypes: {
+    color: {
+      control: 'inline-check',
+      options: ['primary', 'secondary', 'white', 'black', 'gray'],
+    },
   },
 } satisfies Meta<typeof Textarea>;
 
@@ -14,5 +16,8 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const DefaultTextarea: Story = {
-  args: {},
+  args: {
+    children: '안녕하세요',
+    height: 200,
+  },
 };

@@ -17,13 +17,13 @@ const Header = () => {
               alt="img"
             />
           </Link>
-          <Text size="md" className="cursor-p">
+          <Text type="body2" className="cursor-p">
             프로젝트 목록
           </Text>
-          <Text size="md" className="cursor-p">
+          <Text type="body2" className="cursor-p">
             새 프로젝트
           </Text>
-          <Text size="md" className="cursor-p">
+          <Text type="body2" className="cursor-p">
             게시판
           </Text>
         </div>

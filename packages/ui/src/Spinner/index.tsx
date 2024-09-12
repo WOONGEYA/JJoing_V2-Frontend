@@ -1,13 +1,8 @@
-import { cva } from 'class-variance-authority';
-import type { HTMLAttributes } from 'react';
+import { cva, VariantProps } from 'class-variance-authority';
 import { cn } from '../utils';
 
-type SpinnerProps = {
-  size?: 'lg' | 'md' | 'sm';
-} & HTMLAttributes<HTMLDivElement>;
-
 const SpinnerVariants = cva(
-  'animate-spin rounded-full border-solid border-gray-300 border-2 border-t-primary',
+  'animate-spin rounded-full border-gray-300 border-[2.5px] border-t-primary',
   {
     variants: {
       size: {
@@ -21,6 +16,8 @@ const SpinnerVariants = cva(
     },
   }
 );
+
+type SpinnerProps = VariantProps<typeof SpinnerVariants>;
 
 const Spinner = ({ size }: SpinnerProps) => {
   return (

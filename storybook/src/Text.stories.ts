@@ -4,9 +4,11 @@ import type { Meta, StoryObj } from '@storybook/react';
 const meta = {
   title: 'Text',
   component: Text,
-  tags: ['autodocs'],
-  args: {
-    children: '웅이야',
+  argTypes: {
+    type: {
+      control: 'inline-check',
+      options: ['heading', 'title1', 'title2', 'body1', 'body2', 'body3'],
+    },
   },
 } satisfies Meta<typeof Text>;
 
@@ -15,8 +17,6 @@ type Story = StoryObj<typeof meta>;
 
 export const DefaultText: Story = {
   args: {
-    size: 'md',
-    color: 'secondary',
-    weight: 'semibold',
+    children: '안녕하세요',
   },
 };

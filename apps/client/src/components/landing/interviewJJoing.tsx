@@ -15,12 +15,12 @@ const InterviewJJoing = ({ mouseRef }: InterviewJJoingProps) => {
         className="h-full flex flex-col items-center justify-center gap-8"
         ref={mouseRef}
       >
-        <Text size="md" color="gray">
+        <Text type="body1" className="text-gray-500">
           Interview
         </Text>
-        <Text size="lg" className="text-center">
+        <Text type="title2" className="text-center text-gray-800 font-medium">
           프로젝트를 함께 할 팀원, 찾기 어렵고 먼저 연락하기 망설여진 적이 있나요? <br />
-          <Text weight="medium" color="primary">
+          <Text type="title2" className="text-primary">
             팀원을 구할 때 느꼈던 불편한 점
           </Text>
           에 대해 물어보았습니다.

@@ -31,26 +31,26 @@ const InterviewCard = ({
       <div className="flex border-b pb-3 border-gray-300 h-[185px]">
         <div className="w-3/5 flex flex-col justify-evenly gap-5 mb-4">
           <div className="flex flex-col gap-[2px]">
-            <Text size="md" weight="semibold">
+            <Text type="body2" className="text-gray-800">
               {name}
             </Text>
-            <Text size="sm" weight="medium">
+            <Text type="body3" className="text-gray-800">
               {developmentField}
             </Text>
           </div>
-          <Text weight="medium" size="lg" className="leading-6 whitespace-pre-line">
+          <Text type="body1" className="leading-6 whitespace-pre-line text-gray-800">
             "{inconvenience}"
           </Text>
         </div>
         <Image src={icon} width={94} height={140} alt="icon" />
       </div>
       <div className="h-[100px] pt-3 flex flex-col">
-        <Text size="md" className="mb-3">
+        <Text type="body2" className="mb-3 text-gray-800">
           NEEDS
         </Text>
         <ul className="md:list-disc">
           {needs.map((need, index) => (
-            <li className="ml-6 mt-1" key={index}>
+            <li className="ml-6 mt-1 text-gray-800" key={index}>
               {need}
             </li>
           ))}

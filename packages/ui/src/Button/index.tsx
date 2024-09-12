@@ -1,113 +1,62 @@
-import { cva } from 'class-variance-authority';
-import type { HTMLAttributes } from 'react';
-import { forwardRef } from 'react';
+import { cva, VariantProps } from 'class-variance-authority';
+import { ButtonHTMLAttributes, forwardRef } from 'react';
 import { cn } from '../utils';
 
-type ButtonProps = {
-  size?: 'full' | 'xl' | 'lg' | 'md' | 'sm';
-  color?: 'primary' | 'secondary' | 'white' | 'black' | 'gray';
-  bgColor?: 'primary' | 'secondary' | 'black' | 'white' | 'gray';
-  onClick?: () => void;
-  outline?: boolean;
-  round?: '3xl' | '2xl' | 'xl' | 'lg' | 'md';
-  className?: string;
-  children: React.ReactNode;
-  disabled?: boolean;
-} & HTMLAttributes<HTMLButtonElement>;
-
-const ButtonVariants = cva('transition duration-150', {
-  variants: {
-    size: {
-      full: 'w-full bold text-2xl py-3',
-      xl: 'w-52 font-semibold text-2xl py-3',
-      lg: 'w-44 font-semibold text-xl py-3',
-      md: 'w-[144px] font-medium text-xl py-2',
-      sm: 'w-32 font-medium py-2',
-    },
-    color: {
-      primary: 'text-black',
-      secondary: 'text-secondary',
-      white: 'text-white',
-      black: 'text-black',
-      gray: 'text-slate-300',
-    },
-    bgColor: {
-      primary: 'bg-primary',
-      secondary: 'bg-secondary',
-      white: 'bg-white',
-      black: 'bg-black',
-      gray: 'bg-slate-400',
-    },
-    round: {
-      '3xl': 'rounded-3xl',
-      '2xl': 'rounded-2xl',
-      xl: 'rounded-xl',
-      lg: 'rounded-lg',
-      md: 'rounded-md',
-    },
-    disabled: {
-      true: 'cursor-not-allowed opacity-70',
-    },
-    outline: {
-      true: 'bg-white border-2 border-primary text-black hover:bg-primary hover:text-white',
-    },
-  },
-  compoundVariants: [
-    { bgColor: 'white', disabled: false, outline: false, class: 'hover:bg-gray-300' },
-    { bgColor: 'black', disabled: false, outline: false, class: 'hover:bg-gray-900' },
-    {
-      bgColor: 'primary',
-      disabled: false,
-      outline: false,
-      class: 'hover:bg-primaryHover',
-    },
-    { bgColor: 'gray', disabled: false, outline: false, class: 'hover:bg-slate-500' },
-    {
-      bgColor: 'secondary',
-      disabled: false,
-      outline: false,
-      class: 'hover:bg-secondaryHover',
-    },
-  ],
-  defaultVariants: {
-    size: 'lg',
-    color: 'white',
-    bgColor: 'primary',
-    round: 'md',
-    disabled: false,
-    outline: false,
-  },
-});
-
-const Button = forwardRef(function Button(
+const buttonVariants = cva(
+  'flex gap-[6px] items-center justify-center disabled:opacity-30 transition duration-150',
   {
-    size,
-    color,
-    bgColor,
-    onClick,
-    outline,
-    round,
-    className,
-    children,
-    disabled,
-    ...props
-  }: ButtonProps,
-  ref: React.ForwardedRef<HTMLButtonElement>
-) {
-  return (
-    <button
-      ref={ref}
-      disabled={disabled}
-      onClick={onClick}
-      className={cn(
-        ButtonVariants({ size, color, bgColor, outline, round, disabled }),
-        className
-      )}
-      {...props}
-    >
-      {children}
-    </button>
-  );
-});
+    variants: {
+      bgColor: {
+        primary: 'bg-primary hover:bg-primaryHover text-white',
+        secondary: 'bg-secondary hover:bg-secondaryHover text-white',
+        gray: 'bg-gray-500 hover:bg-gray-600 text-white',
+        borderPrimary:
+          'bg-white border-[1.5px] border-primary hover:bg-primary text-gray-800 hover:text-white',
+        borderSecondary:
+          'bg-white border-[1.5px] border-secondary hover:bg-secondary text-gray-800 hover:text-white',
+      },
+      rounded: {
+        none: 'rounded-none',
+        sm: 'rounded-sm',
+        md: 'rounded-md',
+        lg: 'rounded-lg',
+        xl: 'rounded-xl',
+        '2xl': 'rounded-2xl',
+        '3xl': 'rounded-3xl',
+        full: 'rounded-full',
+      },
+      height: {
+        h64: 'h-[64px]',
+        h55: 'h-[55px]',
+        h50: 'h-[50px]',
+      },
+    },
+    defaultVariants: {
+      bgColor: 'primary',
+      rounded: 'lg',
+      height: 'h55',
+    },
+  }
+);
+
+type ButtonProps = VariantProps<typeof buttonVariants> &
+  ButtonHTMLAttributes<HTMLButtonElement> & {
+    width?: number | '100%';
+  };
+
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, bgColor, rounded, width = '100%', height, children, ...props }, ref) => {
+    return (
+      <button
+        ref={ref}
+        className={cn(buttonVariants({ bgColor, rounded, height }), className)}
+        style={{ width }}
+        {...props}
+      >
+        {children}
+      </button>
+    );
+  }
+);
 
 export default Button;
