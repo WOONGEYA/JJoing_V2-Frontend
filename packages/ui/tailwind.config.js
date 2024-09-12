@@ -1,8 +1,15 @@
-import sharedConfig from '@jjoing/design-token/tailwind.config.js';
 import lineCamp from '@tailwindcss/line-clamp';
+import { backgroundImage, colors, fontFamily, fontSize } from './src/themes';
 
 module.exports = {
-  ...sharedConfig,
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    extend: {
+      colors,
+      fontSize,
+      fontFamily,
+      backgroundImage,
+    },
+  },
   plugins: [lineCamp],
 };
