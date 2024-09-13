@@ -5,4 +5,8 @@ export const colors = {
 
   secondary: '#264466',
   secondaryHover: '#182A3E',
+
+  gray: {
+    10: '#F8F9FA',
+  },
 };
