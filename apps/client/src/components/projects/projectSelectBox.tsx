@@ -17,7 +17,7 @@ const ProjectSelectBox = memo(({ options }: ProjectSelectBoxProps) => {
     setIsClickButton(!isClickButton);
   };
 
-  const handleClickOption = (option: ProjectSortOption) => {
+  const handleOptionClick = (option: ProjectSortOption) => {
     setClickButtonOption(option);
     setIsClickButton(false);
   };
@@ -36,7 +36,7 @@ const ProjectSelectBox = memo(({ options }: ProjectSelectBoxProps) => {
           {options.map((option) => (
             <div
               className="w-full h-[40px] px-3 flex items-center cursor-p rounded-md hover:bg-gray-100 transition duration-30"
-              onClick={() => handleClickOption(option)}
+              onClick={() => handleOptionClick(option)}
               key={option.id}
             >
               <Text type="body3">{option.content}</Text>

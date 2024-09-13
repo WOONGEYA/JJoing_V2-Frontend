@@ -14,7 +14,7 @@ const ProjectsPage = () => {
         </div>
         <div className="flex items-end justify-between">
           <span className="text-xl font-medium">프로젝트 목록 📋</span>
-          <div className="flex items-center justify-center rounded-md bg-primary size-[35px] cursor-p">
+          <div className="flex items-center justify-center rounded-md bg-primary size-[35px] cursor-p hover:bg-primaryHover transition duration-15">
             <FaPlus className="size-[18px] text-white" />
           </div>
         </div>
