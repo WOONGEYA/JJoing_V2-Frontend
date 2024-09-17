@@ -1,5 +1,5 @@
 export * from './interviewMetadata';
-export * from './projectOptions';
+export * from './ProjectRecruitmentOptions';
+export * from './projectRecruitmentStatus';
 export * from './projectsMetadata';
-export * from './projectStatus';
 export * from './promotionMetadata';

@@ -1,6 +1,10 @@
 import { Container, Wrapper } from '@/components/layouts';
 import { ProjectSelectBox } from '@/components/projects';
-import { ProjectOptions, ProjectsMeta, ProjectStatus } from '@/constants';
+import {
+  ProjectRecruitmentOptions,
+  ProjectRecruitmentStatus,
+  ProjectsMeta,
+} from '@/constants';
 import { ProjectCard } from '@jjoing/ui';
 import { FaPlus } from 'react-icons/fa6';
 
@@ -9,8 +13,8 @@ const ProjectsPage = () => {
     <Container className="py-10 min-h-[100vh] bg-gray-10">
       <Wrapper>
         <div className="h-[40px] mb-5 flex items-center gap-[10px]">
-          <ProjectSelectBox options={ProjectStatus} />
-          <ProjectSelectBox options={ProjectOptions} />
+          <ProjectSelectBox options={ProjectRecruitmentStatus} />
+          <ProjectSelectBox options={ProjectRecruitmentOptions} />
         </div>
         <div className="flex items-end justify-between">
           <span className="text-xl font-medium">프로젝트 목록 📋</span>

@@ -1,4 +1,4 @@
-export const ProjectStatus = [
+export const ProjectRecruitmentStatus = [
   {
     id: 0,
     content: '전체 프로젝트',

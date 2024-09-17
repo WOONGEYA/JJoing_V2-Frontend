@@ -1,4 +1,4 @@
-export const ProjectOptions = [
+export const ProjectRecruitmentOptions = [
   {
     id: 0,
     content: '최신순',

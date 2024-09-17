@@ -1,6 +1,7 @@
 export const ProjectsMeta = [
   {
     id: 0,
+    imageUrl: '/images/cooperation.webp',
     title: 'radiohead',
     subTitle: 'paranoid android',
     projectDeadline: '2024-10-21',
