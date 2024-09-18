@@ -7,7 +7,8 @@ const TextVariants = cva('', {
     type: {
       heading: 'text-[57px] leading-[63px] font-bold',
       title1: 'text-5xl leading-[58px] font-semibold',
-      title2: 'text-xl font-semibold',
+      title2: 'text-f22 font-medium',
+      title3: 'text-xl font-semibold',
       body1: 'text-lg font-medium',
       body2: 'text-base font-medium',
       body3: 'text-sm font-medium',

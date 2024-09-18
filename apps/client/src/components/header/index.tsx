@@ -30,7 +30,7 @@ const Header = () => {
         <div className="flex items-center gap-6 ">
           <Image
             className="cursor-p"
-            src="images/alarm-icon.svg"
+            src="/images/alarm-icon.svg"
             width={22}
             height={22}
             alt="alarm"

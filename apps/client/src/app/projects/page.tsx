@@ -1,11 +1,6 @@
 import { Container, Wrapper } from '@/components/layouts';
-import { ProjectSelectBox } from '@/components/projects';
-import {
-  ProjectRecruitmentOptions,
-  ProjectRecruitmentStatus,
-  ProjectsMeta,
-} from '@/constants';
-import { ProjectCard } from '@jjoing/ui';
+import { ProjectList, ProjectSelectBox } from '@/components/projects';
+import { ProjectRecruitOptions, ProjectRecruitStatus } from '@/constants';
 import { FaPlus } from 'react-icons/fa6';
 
 const ProjectsPage = () => {
@@ -13,8 +8,8 @@ const ProjectsPage = () => {
     <Container className="py-10 min-h-[100vh] bg-gray-10">
       <Wrapper>
         <div className="h-[40px] mb-5 flex items-center gap-[10px]">
-          <ProjectSelectBox options={ProjectRecruitmentStatus} />
-          <ProjectSelectBox options={ProjectRecruitmentOptions} />
+          <ProjectSelectBox options={ProjectRecruitStatus} />
+          <ProjectSelectBox options={ProjectRecruitOptions} />
         </div>
         <div className="flex items-end justify-between">
           <span className="text-xl font-medium">프로젝트 목록 📋</span>
@@ -22,11 +17,7 @@ const ProjectsPage = () => {
             <FaPlus className="size-[18px] text-white" />
           </div>
         </div>
-        <div className="my-5 grid grid-cols-3 gap-[25px]">
-          {ProjectsMeta.map((project) => (
-            <ProjectCard key={project.id} {...project} />
-          ))}
-        </div>
+        <ProjectList />
       </Wrapper>
     </Container>
   );
