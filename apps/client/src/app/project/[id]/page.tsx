@@ -1,5 +1,6 @@
 import { Container, Wrapper } from '@/components/layouts';
-import { ProjectMemberList, ProjectRecruitInfo } from '@/components/project';
+import { ProjectCategoryBox, ProjectRecruitInfo } from '@/components/project';
+import ProjectMemberList from '@/components/project/projectMemberList';
 import { ProjectDetailMeta } from '@/constants';
 import { Button, Text } from '@jjoing/ui';
 import Image from 'next/image';
@@ -26,15 +27,35 @@ const ProjectPage = () => {
             <ProjectMemberList
               includedMemberImageUrl={ProjectDetailMeta.includedMemberImageUrl}
             />
-            <Button height="h50">수정하기</Button>
-            <Button height="h50" bgColor="secondary">
+            <Button height="h55">수정하기</Button>
+            <Button height="h55" bgColor="secondary">
               모집 마감하기
             </Button>
           </div>
         </div>
-        <div className="pt-6 flex flex-col">
-          <Text type="body1">📋 프로젝트 설명</Text>
-          <Text className="">{ProjectDetailMeta.subTitle}</Text>
+        <div className="pt-12 flex flex-col gap-6">
+          <Text type="title2">📋 프로젝트 설명</Text>
+          <span className="text-lg">{ProjectDetailMeta.subTitle}</span>
+          <div className="mt-16 flex flex-col">
+            <Text type="title2" className="mb-6">
+              💻 업무 카테고리
+            </Text>
+            <ProjectCategoryBox
+              title="개발 분위기"
+              emoji="👨‍👩‍👧‍👦"
+              items={ProjectDetailMeta.developVibe}
+            />
+            <ProjectCategoryBox
+              title="사용기술"
+              emoji="🛠"
+              items={ProjectDetailMeta.developTech}
+            />
+            <ProjectCategoryBox
+              title="협업 툴"
+              emoji="🤝"
+              items={ProjectDetailMeta.developTools}
+            />
+          </div>
         </div>
       </Wrapper>
     </Container>

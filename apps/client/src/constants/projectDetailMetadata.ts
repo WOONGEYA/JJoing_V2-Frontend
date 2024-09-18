@@ -11,4 +11,7 @@ export const ProjectDetailMeta = {
     '/images/imagine-icon.webp',
     '/images/improveSkill.webp',
   ],
+  developVibe: ['기분 좋은', '행복한', '편안한'],
+  developTech: ['react', 'spring boot', 'figma'],
+  developTools: ['intellij', 'vsCode'],
 };
