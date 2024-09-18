@@ -2,7 +2,7 @@ import { cva, VariantProps } from 'class-variance-authority';
 import { forwardRef, HTMLAttributes } from 'react';
 import { cn } from '../utils';
 
-const TextVariants = cva('', {
+const TextVariants = cva('leading-5', {
   variants: {
     type: {
       heading: 'text-[57px] leading-[63px] font-bold',

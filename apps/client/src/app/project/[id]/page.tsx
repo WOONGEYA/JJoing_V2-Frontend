@@ -32,6 +32,10 @@ const ProjectPage = () => {
             </Button>
           </div>
         </div>
+        <div className="pt-6 flex flex-col">
+          <Text type="body1">📋 프로젝트 설명</Text>
+          <Text className="">{ProjectDetailMeta.subTitle}</Text>
+        </div>
       </Wrapper>
     </Container>
   );
