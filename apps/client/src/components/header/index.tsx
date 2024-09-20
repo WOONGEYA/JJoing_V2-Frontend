@@ -21,7 +21,7 @@ const Header = () => {
             프로젝트 목록
           </Text>
           <Text type="body2" className="cursor-p">
-            새 프로젝트
+            프로젝트 생성
           </Text>
           <Text type="body2" className="cursor-p">
             게시판
@@ -30,7 +30,7 @@ const Header = () => {
         <div className="flex items-center gap-6 ">
           <Image
             className="cursor-p"
-            src="images/alarm-icon.svg"
+            src="/images/alarm-icon.svg"
             width={22}
             height={22}
             alt="alarm"

@@ -18,9 +18,9 @@ const InterviewJJoing = ({ mouseRef }: InterviewJJoingProps) => {
         <Text type="body1" className="text-gray-500">
           Interview
         </Text>
-        <Text type="title2" className="text-center text-gray-800 font-medium">
+        <Text type="title3" className="text-center text-gray-800 font-medium">
           프로젝트를 함께 할 팀원, 찾기 어렵고 먼저 연락하기 망설여진 적이 있나요? <br />
-          <Text type="title2" className="text-primary">
+          <Text type="title3" className="text-primary">
             팀원을 구할 때 느꼈던 불편한 점
           </Text>
           에 대해 물어보았습니다.

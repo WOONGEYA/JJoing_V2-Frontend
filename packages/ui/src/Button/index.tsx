@@ -14,6 +14,7 @@ const buttonVariants = cva(
           'bg-white border-[1.5px] border-primary hover:bg-primary text-gray-800 hover:text-white',
         borderSecondary:
           'bg-white border-[1.5px] border-secondary hover:bg-secondary text-gray-800 hover:text-white',
+        borderGray: 'bg-white border-[1.5px] border-gray-300 text-gray-800 cursor-auto',
       },
       rounded: {
         none: 'rounded-none',
@@ -29,6 +30,7 @@ const buttonVariants = cva(
         h64: 'h-[64px]',
         h55: 'h-[55px]',
         h50: 'h-[50px]',
+        h45: 'h-[45px]',
       },
     },
     defaultVariants: {

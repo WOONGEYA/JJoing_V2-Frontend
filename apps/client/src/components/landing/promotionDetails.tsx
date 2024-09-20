@@ -23,7 +23,7 @@ const PromotionDetails = ({ id, title, explain }: PromotionDetailsTypes) => {
         <Text type="body1" className="text-primary">
           {id}
         </Text>
-        <span className="text-f24 font-semibold text-gray-800">{title}</span>
+        <span className="text-2xl font-semibold text-gray-800">{title}</span>
         <Text type="body3" className="leading-5 whitespace-pre-line">
           {explain}
         </Text>

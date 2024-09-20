@@ -1,10 +1,5 @@
 export const fontSize = {
-  f24: [
-    '24px',
-    {
-      lineHeight: '29px',
-    },
-  ],
+  f22: '22px',
   f32: [
     '32px',
     {

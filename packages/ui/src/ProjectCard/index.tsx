@@ -42,6 +42,8 @@ const ProjectCard = forwardRef(function ProjectCard(
             <img
               className="size-full rounded-t-lg object-cover transform hover:scale-110 transition-transform duration-200 ease-in-out"
               src={imageUrl.replace(/\.(jpg|png)$/, '.webp')}
+              loading="lazy"
+              alt={title}
             />
           )}
         </div>
