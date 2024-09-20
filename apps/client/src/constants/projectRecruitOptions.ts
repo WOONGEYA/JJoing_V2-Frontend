@@ -1,17 +1,19 @@
-export const ProjectRecruitOptions = [
+import type { ProjectSortOption } from '@/types';
+
+export const ProjectRecruitOptions: ProjectSortOption[] = [
   {
     id: 0,
     content: '최신순',
-    criteria: '',
+    state: '',
   },
   {
     id: 1,
     content: '조회수 많은 순',
-    criteria: 'view',
+    state: 'view',
   },
   {
     id: 2,
     content: '좋아요 많은 순',
-    criteria: 'like',
+    state: 'like',
   },
 ];

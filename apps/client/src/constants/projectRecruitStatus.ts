@@ -1,4 +1,6 @@
-export const ProjectRecruitStatus = [
+import type { ProjectSortOption } from '@/types';
+
+export const ProjectRecruitStatus: ProjectSortOption[] = [
   {
     id: 0,
     content: '전체 프로젝트',
