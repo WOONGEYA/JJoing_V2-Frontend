@@ -1,6 +1,6 @@
 'use client';
 
-import { useSrcollToRef } from '@/hooks';
+import { useScrollToRef } from '@/hooks';
 import { Button, Text } from '@jjoing/ui';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
@@ -15,7 +15,7 @@ const InterviewJJoing = dynamic(() => import('./interviewJJoing'), {
 
 const IntroduceJJoing = () => {
   const mouseRef = useRef<HTMLDivElement>(null);
-  const handleScroll = useSrcollToRef(mouseRef);
+  const handleScroll = useScrollToRef(mouseRef);
 
   return (
     <>
@@ -54,7 +54,7 @@ const IntroduceJJoing = () => {
             </div>
           </div>
           <div className="w-[400px] flex items-end justify-end">
-            <Sticker stickerUrl="/images/imagine-icon.webp" width={380} height={384} />
+            <Sticker stickerUrl="/images/imagine-icon.webp" width={360} height={364} />
           </div>
         </Wrapper>
       </Container>

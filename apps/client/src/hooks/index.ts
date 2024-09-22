@@ -1,1 +1,1 @@
-export { default as useSrcollToRef } from './useScrollToRef';
+export { default as useScrollToRef } from './useScrollToRef';
