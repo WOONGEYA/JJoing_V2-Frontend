@@ -5,7 +5,7 @@ export const InterviewMeta = [
     developmentField: '프론트엔드 개발자',
     inconvenience: '먼저 연락하기\n부담스러워요.',
     needs: ['팀 분위기를 미리 알 수 있었으면 좋겠어요.', '연락하기 쉬우면 좋겠어요.'],
-    icon: '/images/interviewer01.svg',
+    icon: '/images/interviewer01.webp',
   },
   {
     id: 1,
@@ -13,7 +13,7 @@ export const InterviewMeta = [
     developmentField: '디자이너',
     inconvenience: '원하는 느낌의\n프로젝트가 없어요.',
     needs: ['어떤 프로젝트인지 미리 알고싶어요.', '사용하는 툴이 같으면 좋겠어요.'],
-    icon: '/images/interviewer02.svg',
+    icon: '/images/interviewer02.webp',
   },
   {
     id: 2,
@@ -21,6 +21,6 @@ export const InterviewMeta = [
     developmentField: '백엔드 개발자',
     inconvenience: '비슷한 실력의\n팀원을 찾고싶어요.',
     needs: ['역할군을 미리 정하고싶어요.', '팀원의 실력을 알 수 있으면 좋겠어요.'],
-    icon: '/images/interviewer03.svg',
+    icon: '/images/interviewer03.webp',
   },
 ];

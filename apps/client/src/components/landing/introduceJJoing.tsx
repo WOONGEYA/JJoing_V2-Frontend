@@ -3,11 +3,12 @@
 import { useScrollToRef } from '@/hooks';
 import { Button, Text } from '@jjoing/ui';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRef } from 'react';
 import { BsMouse } from 'react-icons/bs';
 import { IoIosArrowForward } from 'react-icons/io';
-import { Container, Sticker, Wrapper } from '../layouts';
+import { Container, Wrapper } from '../layouts';
 
 const InterviewJJoing = dynamic(() => import('./interviewJJoing'), {
   ssr: false,
@@ -54,7 +55,7 @@ const IntroduceJJoing = () => {
             </div>
           </div>
           <div className="w-[400px] flex items-end justify-end">
-            <Sticker stickerUrl="/images/imagine-icon.webp" width={360} height={364} />
+            <Image src="/images/imagine-icon.webp" width={360} height={364} alt="" />
           </div>
         </Wrapper>
       </Container>

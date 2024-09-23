@@ -1,5 +1,3 @@
-'use client';
-
 import type { ProjectSortOption, ProjectSortOptionState } from '@/types';
 import { Text } from '@jjoing/ui';
 import { Dispatch, memo, SetStateAction, useState } from 'react';

@@ -126,6 +126,19 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: 'Pretendard';
+  src:
+    url('/fonts/pretendard.woff2') format('woff2'),
+    url('/fonts/pretendard.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-pretendard {
+  font-family: 'Pretendard', sans-serif;
+}
+
 .cursor-p {
   cursor: pointer;
 }

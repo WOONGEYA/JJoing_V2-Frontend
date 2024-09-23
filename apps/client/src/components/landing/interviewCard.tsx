@@ -42,7 +42,9 @@ const InterviewCard = ({
             "{inconvenience}"
           </Text>
         </div>
-        <Image src={icon} width={94} height={140} alt="icon" />
+        <div className="flex items-center justify-center w-2/5">
+          <Image src={icon} width={100} height={148} alt="icon" />
+        </div>
       </div>
       <div className="h-[100px] pt-3 flex flex-col">
         <Text type="body2" className="mb-3 text-gray-800">
