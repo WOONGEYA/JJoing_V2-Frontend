@@ -4,7 +4,10 @@ import Providers from '@/providers/Providers';
 import '@/styles/globals.css';
 import { PropsWithChildren } from 'react';
 
-export const metadata = { title: '쪼잉' };
+export const metadata = {
+  title: '쪼잉',
+  description: '쪼잉을 이용하여 프로젝트를 진행해보세요!',
+};
 
 const RootLayout = ({ children }: PropsWithChildren) => {
   return (
