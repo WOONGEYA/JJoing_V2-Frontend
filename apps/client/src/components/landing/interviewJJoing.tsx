@@ -10,7 +10,7 @@ type InterviewJJoingProps = {
 
 const InterviewJJoing = ({ mouseRef }: InterviewJJoingProps) => {
   return (
-    <Container className="h-[100vh] bg-white">
+    <Container className="h-[100dvh] bg-white">
       <Wrapper
         className="h-full flex flex-col items-center justify-center gap-8"
         ref={mouseRef}

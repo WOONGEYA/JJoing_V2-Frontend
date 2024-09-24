@@ -128,9 +128,7 @@ table {
 
 @font-face {
   font-family: 'Pretendard';
-  src:
-    url('/fonts/pretendard.woff2') format('woff2'),
-    url('/fonts/pretendard.woff') format('woff');
+  src: url('/fonts/Pretendard/Pretendard-Medium.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -144,7 +142,7 @@ table {
 }
 
 .content-container {
-  height: calc(100vh - 64px);
+  height: calc(100dvh - 64px);
 }
 
 @keyframes floatMouse {

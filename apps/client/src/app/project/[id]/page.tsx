@@ -8,7 +8,7 @@ import { IoPeople } from 'react-icons/io5';
 
 const ProjectPage = () => {
   return (
-    <Container className="py-10 min-h-[100vh] bg-gray-10">
+    <Container className="py-10 min-h-[100dvh] bg-gray-10">
       <Wrapper>
         <div className="flex gap-6 h-[400px] border-b pb-5">
           <Image
@@ -27,10 +27,17 @@ const ProjectPage = () => {
             <ProjectMemberList
               includedMemberImageUrl={ProjectDetailMeta.includedMemberImageUrl}
             />
-            <Button height="h55">수정하기</Button>
-            <Button height="h55" bgColor="secondary">
-              모집 마감하기
-            </Button>
+            <div className="flex flex-col gap-2">
+              <div className="flex gap-2">
+                <Button height="h55">채팅방 가기</Button>
+                <Button height="h55" bgColor="gray">
+                  수정하기
+                </Button>
+              </div>
+              <Button height="h55" bgColor="secondary">
+                모집 마감하기
+              </Button>
+            </div>
           </div>
         </div>
         <div className="pt-12 flex flex-col gap-6">
