@@ -8,7 +8,7 @@ import { IoPeople } from 'react-icons/io5';
 
 const ProjectPage = () => {
   return (
-    <Container className="py-10 min-h-[100dvh] bg-gray-10">
+    <Container className="py-10 min-h-dvh bg-gray-10">
       <Wrapper>
         <div className="flex gap-6 h-[400px] border-b pb-5">
           <Image
