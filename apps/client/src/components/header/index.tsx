@@ -35,7 +35,9 @@ const Header = () => {
             height={22}
             alt="alarm"
           />
-          <div className="rounded-[50%] bg-gray-500 size-9 cursor-p" />
+          <Link href="/user/123">
+            <div className="rounded-[50%] bg-gray-500 size-9 cursor-p" />
+          </Link>
         </div>
       </Wrapper>
     </Container>
