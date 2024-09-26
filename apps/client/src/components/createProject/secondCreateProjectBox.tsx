@@ -1,22 +1,13 @@
-import type { OverlayModal } from '@/types';
 import { Button, Input, Text } from '@jjoing/ui';
 import { useFormContext } from 'react-hook-form';
-import { IoClose } from 'react-icons/io5';
 
-type SecondCreateProjectPageProps = Omit<OverlayModal, 'open'>;
-
-const SecondCreateProjectPage = ({ close }: SecondCreateProjectPageProps) => {
+const SecondCreateProjectBox = () => {
   const { register, setValue } = useFormContext();
 
-  const handlePrevPage = () => setValue('page', 1);
+  const handlePrevPage = () => setValue('page', 0);
 
   return (
-    <div className="bg-white size-full p-7 rounded-xl">
-      <div className="flex items-center justify-between mb-5">
-        <Text type="body1">프로젝트 생성하기 🖨</Text>
-        <IoClose onClick={close} className="size-7 cursor-pointer" />
-      </div>
-
+    <>
       <div className="flex flex-col gap-1 mb-4">
         <Text type="body2">분위기 유형</Text>
         <Input
@@ -54,8 +45,8 @@ const SecondCreateProjectPage = ({ close }: SecondCreateProjectPageProps) => {
           제출
         </Button>
       </div>
-    </div>
+    </>
   );
 };
 
-export default SecondCreateProjectPage;
+export default SecondCreateProjectBox;

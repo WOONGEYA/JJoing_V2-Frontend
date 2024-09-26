@@ -1,10 +1,12 @@
 import type { OverlayModal } from '@/types';
+import { Text } from '@jjoing/ui';
 import { FormProvider, useForm, useWatch } from 'react-hook-form';
+import { IoClose } from 'react-icons/io5';
 import ModalWrapper from '../layouts/modalWrapper';
-import FirstCreateProjectPage from './firstCreateProjectPage';
-import SecondCreateProjectPage from './secondCreateProjectPage';
+import FirstCreateProjectBox from './firstCreateProjectBox';
+import SecondCreateProjectBox from './secondCreateProjectBox';
 
-type CreateProjectFrom = {
+type CreateProjectForm = {
   projectName: string;
   recruitMember: number;
   startDate: string;
@@ -21,7 +23,7 @@ type CreateProjectFrom = {
 };
 
 const CreateProject = ({ open, close }: OverlayModal) => {
-  const methods = useForm<CreateProjectFrom>({
+  const methods = useForm<CreateProjectForm>({
     defaultValues: { page: 0 },
   });
 
@@ -30,7 +32,7 @@ const CreateProject = ({ open, close }: OverlayModal) => {
     name: 'page',
   });
 
-  const onSubmit = (data: CreateProjectFrom) => {
+  const onSubmit = (data: CreateProjectForm) => {
     console.log('data: ', data);
   };
 
@@ -38,11 +40,13 @@ const CreateProject = ({ open, close }: OverlayModal) => {
     <ModalWrapper open={open} close={close}>
       <FormProvider {...methods}>
         <form onSubmit={methods.handleSubmit(onSubmit)}>
-          {page === 0 ? (
-            <FirstCreateProjectPage close={close} />
-          ) : (
-            <SecondCreateProjectPage close={close} />
-          )}
+          <div className="bg-white size-full p-7 rounded-xl">
+            <div className="flex items-center justify-between mb-5">
+              <Text type="body1">프로젝트 생성하기 🖨</Text>
+              <IoClose onClick={close} className="size-7 cursor-pointer" />
+            </div>
+            {page === 0 ? <FirstCreateProjectBox /> : <SecondCreateProjectBox />}
+          </div>
         </form>
       </FormProvider>
     </ModalWrapper>
