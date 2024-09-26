@@ -15,7 +15,8 @@ const UserProjectContainer = () => {
             onClick={handleSeachOptions}
             className={cn(
               'w-1/2 p-2 text-center text-gray-20 cursor-pointer duration-200 hover:shadow-[inset_0_-2px_0_#ADB5BD]',
-              searchProcessingProject && 'shadow-[inset_0_-2px_0_#2F9266] text-primary'
+              searchProcessingProject &&
+                'shadow-[inset_0_-2px_0_#2F9266] hover:shadow-[inset_0_-2px_0_#2F9266] text-primary'
             )}
           >
             참여중인 프로젝트
@@ -24,7 +25,8 @@ const UserProjectContainer = () => {
             onClick={handleSeachOptions}
             className={cn(
               'w-1/2 p-2 text-center text-gray-20 cursor-pointer duration-200 hover:shadow-[inset_0_-2px_0_#ADB5BD]',
-              !searchProcessingProject && 'shadow-[inset_0_-2px_0_#2F9266] text-primary'
+              !searchProcessingProject &&
+                'shadow-[inset_0_-2px_0_#2F9266] hover:shadow-[inset_0_-2px_0_#2F9266] text-primary'
             )}
           >
             참여했던 프로젝트
