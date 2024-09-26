@@ -16,7 +16,7 @@ const UserProfile = () => {
         </div>
       </div>
       <Button height="h45" width={152}>
-        <Text type="body3">팔로우</Text>
+        팔로우
       </Button>
     </section>
   );
