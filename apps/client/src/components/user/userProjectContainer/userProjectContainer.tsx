@@ -30,12 +30,7 @@ const UserProjectContainer = () => {
             참여했던 프로젝트
           </div>
         </div>
-        <Input
-          color="black"
-          border="none"
-          placeholder="검색어를 입력해주세요."
-          className="shadow-[1px_1px_4px_#ADB5BD] rounded-md"
-        >
+        <Input color="black" placeholder="검색어를 입력해주세요." className="rounded-md">
           <IoSearch color="#ADB5BD" />
         </Input>
       </div>

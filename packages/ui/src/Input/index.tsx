@@ -11,14 +11,9 @@ const InputVariants = cva('', {
       black: 'text-black',
       gray: 'text-gray-800',
     },
-    border: {
-      gray: 'border-gray-300 focus-within:border-gray-400',
-      none: 'border-none',
-    },
   },
   defaultVariants: {
     color: 'black',
-    border: 'gray',
   },
 });
 
@@ -33,7 +28,6 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     {
       width = 250,
       color,
-      border,
       placeholder = '검색어를 입력해주세요.',
       onChange,
       className,
@@ -45,8 +39,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     return (
       <div
         className={cn(
-          InputVariants({ color, border }),
-          'border-[1.5px] flex py-2 px-3 rounded-[0.6rem] h-11 transition duration-80 ease-in-out relative',
+          InputVariants({ color }),
+          'border-[1.5px] flex py-2 px-3 rounded-[0.6rem] border-gray-300 focus-within:border-gray-400 h-11 transition duration-80 ease-in-out relative',
           className
         )}
         style={{ width }}
