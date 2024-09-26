@@ -13,7 +13,7 @@ const ProjectsPage = () => {
   console.log(projectStatus, projectOptions); // 백엔드로 요청보낼때 사용될 코드
 
   return (
-    <Container className="py-10 min-h-[100dvh] bg-gray-10">
+    <Container className="py-10 min-h-dvh bg-gray-10">
       <Wrapper>
         <div className="h-[40px] mb-5 flex items-center gap-[10px]">
           <ProjectSelectBox
