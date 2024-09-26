@@ -160,3 +160,7 @@ table {
 .bounce {
   animation: floatMouse 1.3s ease-in-out infinite;
 }
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
