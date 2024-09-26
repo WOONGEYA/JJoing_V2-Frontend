@@ -24,14 +24,7 @@ type InputProps = VariantProps<typeof InputVariants> &
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
   (
-    {
-      width = 250,
-      color,
-      placeholder = '검색어를 입력해주세요.',
-      onChange,
-      className,
-      ...props
-    },
+    { width = 250, color, placeholder = '검색어를 입력해주세요.', className, ...props },
     ref
   ) => {
     return (
@@ -46,7 +39,6 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         <input
           ref={ref}
           placeholder={placeholder}
-          onChange={onChange}
           className="outline-0 placeholder:text-gray-300 text-sm w-full"
           {...props}
         />

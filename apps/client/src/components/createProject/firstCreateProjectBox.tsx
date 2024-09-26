@@ -5,7 +5,7 @@ import FormField from './formField';
 import RecruitPeriodField from './recruitPeriodField';
 
 const FirstCreateProjectBox = () => {
-  const { register, setValue } = useFormContext();
+  const { setValue } = useFormContext();
 
   const handleNextPage = () => setValue('page', 1);
 

@@ -1,44 +1,31 @@
-import { Button, Input, Text } from '@jjoing/ui';
+import { Button } from '@jjoing/ui';
 import { useFormContext } from 'react-hook-form';
+import FormField from './formField';
 
 const SecondCreateProjectBox = () => {
-  const { register, setValue } = useFormContext();
+  const { setValue } = useFormContext();
 
   const handlePrevPage = () => setValue('page', 0);
 
   return (
     <>
-      <div className="flex flex-col gap-1 mb-4">
-        <Text type="body2">분위기 유형</Text>
-        <Input
-          width="100%"
-          placeholder="개발 분위기를 알려주세요."
-          {...register('mood')}
-        />
-      </div>
-      <div className="flex flex-col gap-1 mb-4">
-        <Text type="body2">사용 기술</Text>
-        <Input
-          width="100%"
-          placeholder="사용할 기술을 알려주세요."
-          {...register('developSkills')}
-        />
-      </div>
-
-      <div className="flex flex-col gap-1 mb-4">
-        <Text type="body2">협업 툴</Text>
-        <Input
-          width="100%"
-          placeholder="협업툴을 알려주세요."
-          {...register('developTools')}
-        />
-      </div>
-      <div className="flex flex-col gap-1 mb-4">
-        <Text type="body2">협업 툴</Text>
-        <Input width="100%" placeholder="협업툴을 알려주세요." {...register('image')} />
-      </div>
+      <FormField
+        title="분위기 유형"
+        placeholder="개발 분위기를 알려주세요."
+        fieldName="mood"
+      />
+      <FormField
+        title="사용 기술"
+        placeholder="사용할 기술을 알려주세요."
+        fieldName="developSkills"
+      />
+      <FormField
+        title="협업 툴"
+        placeholder="협업툴을 알려주세요."
+        fieldName="developTools"
+      />
       <div className="flex justify-between">
-        <Button height="h45" width={100} onClick={handlePrevPage}>
+        <Button height="h45" width={100} bgColor="primary" onClick={handlePrevPage}>
           이전
         </Button>
         <Button height="h45" width={100}>
