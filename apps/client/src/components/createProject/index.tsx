@@ -24,7 +24,9 @@ type CreateProjectForm = {
 
 const CreateProject = ({ open, close }: OverlayModal) => {
   const methods = useForm<CreateProjectForm>({
-    defaultValues: { page: 0 },
+    defaultValues: {
+      page: 0,
+    },
   });
 
   const page = useWatch({

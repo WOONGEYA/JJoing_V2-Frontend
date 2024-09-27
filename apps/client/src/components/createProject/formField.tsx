@@ -18,6 +18,7 @@ const FormField = ({ title, placeholder, fieldName, type = 'text' }: FormFieldPr
         type={type}
         width="100%"
         placeholder={placeholder}
+        defaultValue={type === 'number' ? 1 : undefined}
         min={1}
         max={10}
         {...register(fieldName)}

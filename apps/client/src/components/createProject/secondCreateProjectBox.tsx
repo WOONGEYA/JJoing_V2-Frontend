@@ -1,6 +1,6 @@
 import { Button } from '@jjoing/ui';
 import { useFormContext } from 'react-hook-form';
-import FormField from './formField';
+import FormArrayField from './formArrayField';
 
 const SecondCreateProjectBox = () => {
   const { setValue } = useFormContext();
@@ -9,19 +9,19 @@ const SecondCreateProjectBox = () => {
 
   return (
     <>
-      <FormField
+      <FormArrayField
         title="분위기 유형"
-        placeholder="개발 분위기를 알려주세요."
+        placeholder="예시) 묵묵한, 충실한 (엔터로 구분해 주세요!)"
         fieldName="mood"
       />
-      <FormField
+      <FormArrayField
         title="사용 기술"
-        placeholder="사용할 기술을 알려주세요."
+        placeholder="예시) 리액트, 노드 (엔터로 구분해 주세요!)"
         fieldName="developSkills"
       />
-      <FormField
+      <FormArrayField
         title="협업 툴"
-        placeholder="협업툴을 알려주세요."
+        placeholder="예시) vsCode, intellij (엔터로 구분해 주세요!)"
         fieldName="developTools"
       />
       <div className="flex justify-between">

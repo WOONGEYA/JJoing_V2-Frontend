@@ -1,6 +1,7 @@
 import { Button } from '@jjoing/ui';
 import { useFormContext } from 'react-hook-form';
 import ExplainField from './explainField';
+import FormArrayField from './formArrayField';
 import FormField from './formField';
 import RecruitPeriodField from './recruitPeriodField';
 
@@ -23,9 +24,9 @@ const FirstCreateProjectBox = () => {
         type="number"
       />
       <RecruitPeriodField />
-      <FormField
+      <FormArrayField
         title="모집 분야"
-        placeholder="모집 분야를 알려주세요."
+        placeholder="예시) 디자이너, 백엔드 (엔터로 구분해 주세요!)"
         fieldName="projectField"
       />
       <ExplainField />

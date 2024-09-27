@@ -11,7 +11,7 @@ const ModalWrapper = ({ open, close, children }: ModalWrapperProps) => {
         onClick={close}
       >
         <div
-          className="w-full max-w-xl max-h-[47rem] overflow-scroll"
+          className="w-full max-w-xl max-h-[48rem] overflow-scroll scrollbar-hide"
           onClick={(e) => e.stopPropagation()}
         >
           {children}

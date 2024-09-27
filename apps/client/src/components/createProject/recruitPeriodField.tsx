@@ -4,7 +4,7 @@ import { useFormContext } from 'react-hook-form';
 
 const RecruitPeriodField = () => {
   const { register } = useFormContext();
-  const today = dayjs().format().slice(0, 10);
+  const today = dayjs().format('YYYY. MM. DD.');
 
   return (
     <div className="flex flex-col gap-1 mb-4">
