@@ -25,7 +25,7 @@ const SecondCreateProjectBox = () => {
         fieldName="developTools"
       />
       <div className="flex justify-between">
-        <Button height="h45" width={100} bgColor="primary" onClick={handlePrevPage}>
+        <Button height="h45" width={100} bgColor="gray" onClick={handlePrevPage}>
           이전
         </Button>
         <Button height="h45" width={100}>

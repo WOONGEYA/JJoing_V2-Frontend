@@ -49,7 +49,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           ref={ref}
           placeholder={placeholder}
           onChange={onChange}
-          className="outline-0 placeholder:text-gray-300 text-sm resize-none size-full"
+          className="outline-0 placeholder:text-gray-300 text-sm resize-none size-full scrollbar-hide"
           {...props}
         />
       </div>
