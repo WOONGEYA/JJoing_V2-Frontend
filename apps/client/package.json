@@ -18,14 +18,19 @@
   "devDependencies": {
     "@jjoing/eslint-config": "workspace:*",
     "@jjoing/typescript-config": "workspace:*",
+    "@toss/use-overlay": "^1.4.0",
     "@types/node": "^20.8.0",
     "@types/react": "^18.2.23",
     "@types/react-dom": "^18.2.7",
     "autoprefixer": "^10.4.14",
+    "dayjs": "^1.11.13",
     "eslint": "^8.50.0",
     "eslint-config-next": "^14.0.5",
     "framer-motion": "^11.3.30",
     "postcss": "^8.4.27",
+    "react-dropzone": "^14.2.3",
+    "react-hook-form": "^7.53.0",
+    "tailwind-scrollbar-hide": "^1.1.7",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.2.2"
   }

@@ -9,7 +9,7 @@ const buttonVariants = cva(
       bgColor: {
         primary: 'bg-primary hover:bg-primaryHover text-white',
         secondary: 'bg-secondary hover:bg-secondaryHover text-white',
-        gray: 'bg-gray-500 hover:bg-gray-600 text-white',
+        gray: 'bg-gray-400 hover:bg-gray-500 text-white',
         borderPrimary:
           'bg-white border-[1.5px] border-primary hover:bg-primary text-gray-800 hover:text-white',
         borderSecondary:
@@ -31,6 +31,7 @@ const buttonVariants = cva(
         h55: 'h-[55px]',
         h50: 'h-[50px]',
         h45: 'h-[45px]',
+        h40: 'h-[40px]',
       },
     },
     defaultVariants: {

@@ -6,4 +6,5 @@ module.exports = {
     './src/**/*.{js,jsx,ts,tsx}',
     './node_modules/@jjoing/ui/src/**/*.{js,jsx,ts,tsx}',
   ],
+  plugins: [require('tailwind-scrollbar-hide')],
 };
