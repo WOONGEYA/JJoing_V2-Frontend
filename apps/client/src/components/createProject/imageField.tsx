@@ -1,5 +1,6 @@
 import { Text } from '@jjoing/ui';
 import { useState } from 'react';
+import { useDropzone } from 'react-dropzone';
 import { useFormContext } from 'react-hook-form';
 import { IoFolderOpenOutline } from 'react-icons/io5';
 
@@ -7,19 +8,30 @@ const ImageField = () => {
   const { register } = useFormContext();
   const [previewImage, setPreviewImage] = useState('');
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-
+  const encodingImageUrl = (file: File | null) => {
     if (file) {
       const imageUrl = URL.createObjectURL(file);
       setPreviewImage(imageUrl);
     }
   };
 
+  const onDrop = (dragImage?: File[]) => {
+    const imageFile = dragImage?.[0] ?? null;
+    encodingImageUrl(imageFile);
+  };
+
+  const { getRootProps, getInputProps } = useDropzone({ onDrop });
+
+  const handleChangeImage = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] ?? null;
+    encodingImageUrl(file);
+  };
+
   return (
     <div className="flex flex-col gap-1 mb-4">
       <Text type="body2">모집 기한</Text>
       <div
+        {...getRootProps()}
         className="bg-gray-50 w-full h-60 dashed-border rounded-lg flex items-center justify-center relative bg-cover bg-center"
         style={{ backgroundImage: previewImage && `url(${previewImage})` }}
       >
@@ -27,8 +39,9 @@ const ImageField = () => {
           type="file"
           accept="image/*"
           {...register('image', {
-            onChange: handleChange,
+            onChange: handleChangeImage,
           })}
+          {...getInputProps()}
           className="size-full absolute opacity-0 cursor-pointer"
         />
         {!previewImage && (
