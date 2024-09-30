@@ -1,5 +1,5 @@
 import { cva, VariantProps } from 'class-variance-authority';
-import { forwardRef, InputHTMLAttributes } from 'react';
+import { cloneElement, forwardRef, InputHTMLAttributes, ReactElement } from 'react';
 import { cn } from '../utils';
 
 const InputVariants = cva('', {
@@ -20,26 +20,43 @@ const InputVariants = cva('', {
 type InputProps = VariantProps<typeof InputVariants> &
   InputHTMLAttributes<HTMLInputElement> & {
     width?: number | '100%';
+    children?: ReactElement;
   };
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
   (
-    { width = 250, color, placeholder = '검색어를 입력해주세요.', className, ...props },
+    {
+      width = 250,
+      color,
+      placeholder = '검색어를 입력해주세요.',
+      onChange,
+      className,
+      children,
+      ...props
+    },
     ref
   ) => {
     return (
       <div
         className={cn(
           InputVariants({ color }),
-          'border-[1.5px] flex py-2 px-3 rounded-[0.6rem] h-11 border-gray-300 focus-within:border-gray-400 transition duration-80 ease-in-out',
+          'border-[1.5px] flex py-2 px-3 rounded-[0.6rem] border-gray-300 focus-within:border-gray-400 h-11 transition duration-80 ease-in-out relative',
           className
         )}
         style={{ width }}
       >
+        {children &&
+          cloneElement(children, {
+            className: 'absolute top-[50%] translate-y-[-50%] left-[5%]',
+          })}
         <input
           ref={ref}
           placeholder={placeholder}
-          className="outline-0 placeholder:text-gray-300 text-sm w-full"
+          onChange={onChange}
+          className={cn(
+            'outline-0 placeholder:text-gray-300 text-sm w-full',
+            children && 'pl-[10%]'
+          )}
           {...props}
         />
       </div>
