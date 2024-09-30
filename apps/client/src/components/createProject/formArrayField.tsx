@@ -28,11 +28,11 @@ const FormArrayField = ({ title, placeholder, fieldName }: FormFieldProps) => {
   };
 
   return (
-    <div className="flex flex-col gap-1 mb-4">
+    <div className="flex flex-col gap-1 mb-3">
       <Text type="body2">{title}</Text>
       <Input width="100%" onKeyDown={handleKeyDown} placeholder={placeholder} />
       <div className="mt-2 flex gap-1 overflow-x-auto whitespace-nowrap scrollbar-hide">
-        {fields.map((item: any) => (
+        {fields.map((item: any, index: number) => (
           <Button
             bgColor="borderGray"
             rounded="full"
@@ -42,7 +42,7 @@ const FormArrayField = ({ title, placeholder, fieldName }: FormFieldProps) => {
             key={item.id}
           >
             {item.value}
-            <IoClose onClick={() => remove(item.id)} className="ml-1 cursor-pointer" />
+            <IoClose onClick={() => remove(index)} className="ml-1 cursor-pointer" />
           </Button>
         ))}
       </div>

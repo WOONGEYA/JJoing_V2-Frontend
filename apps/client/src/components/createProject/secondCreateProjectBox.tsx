@@ -1,11 +1,13 @@
 import { Button } from '@jjoing/ui';
-import { useFormContext } from 'react-hook-form';
 import FormArrayField from './formArrayField';
+import ImageField from './imageField';
 
-const SecondCreateProjectBox = () => {
-  const { setValue } = useFormContext();
+type SecondCreateProjectBoxProps = {
+  setPage: React.Dispatch<React.SetStateAction<number>>;
+};
 
-  const handlePrevPage = () => setValue('page', 0);
+const SecondCreateProjectBox = ({ setPage }: SecondCreateProjectBoxProps) => {
+  const handlePrevPage = () => setPage(0);
 
   return (
     <>
@@ -24,6 +26,7 @@ const SecondCreateProjectBox = () => {
         placeholder="예시) vsCode, intellij (엔터로 구분해 주세요!)"
         fieldName="developTools"
       />
+      <ImageField />
       <div className="flex justify-between">
         <Button height="h45" width={100} bgColor="gray" onClick={handlePrevPage}>
           이전

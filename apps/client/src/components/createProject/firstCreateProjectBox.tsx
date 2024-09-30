@@ -1,14 +1,15 @@
 import { Button } from '@jjoing/ui';
-import { useFormContext } from 'react-hook-form';
 import ExplainField from './explainField';
 import FormArrayField from './formArrayField';
 import FormField from './formField';
 import RecruitPeriodField from './recruitPeriodField';
 
-const FirstCreateProjectBox = () => {
-  const { setValue } = useFormContext();
+type FirstCreateProjectBoxProps = {
+  setPage: React.Dispatch<React.SetStateAction<number>>;
+};
 
-  const handleNextPage = () => setValue('page', 1);
+const FirstCreateProjectBox = ({ setPage }: FirstCreateProjectBoxProps) => {
+  const handleNextPage = () => setPage(1);
 
   return (
     <>
